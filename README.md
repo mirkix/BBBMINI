@@ -41,7 +41,7 @@ P9.03 VDD_3V3 | VDD | 3.3 Volt for Spektrum Satellit SPM 9645
 P8.15 RC_IN_3V3 | RC Out (Spektrum / PPM-sum) | The Spektrum output is 3 Volt, check if Level Shifter is required 
 
 ### RCOutput
-BBB | RC Receiver | Remark
+BBB | ESC / Servo | Remark
 ------------ | ------------- | -------------
 P9.01 DGND | GND | 
 P8.27 | RC_OUT_CH_2 | Use Level Shifter 3.3 Volt to 5 Volt
