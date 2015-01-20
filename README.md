@@ -23,12 +23,37 @@ Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 ### Compile ArduPilot
 `cd ardupilot/ArduCopter`
 
+or
+
+`cd ardupilot/ArduPlane`
+
+or 
+
+`cd ardupilot/APMrover2`
+
+then
+
 `make configure`
 
 `make bbbmini`
 
 ### Run ArduPilot
-`sudo ./ArduCopter.elf`
+Before you can start ArduPilot you have to enable the hardware once after startup:
+
+`sudo ardupilot/Tools/Linux_HAL_Essentials/startup.sh load`
+
+then you can start Ardupilot:
+
+`sudo ardupilot/ArduCopter/ArduCopter.elf`
+
+or
+
+`sudo ardupilot/ArduPlan/ArduPlan.elf`
+
+or
+
+`sudo ardupilot/APMrover2/APMrover2.elf`
+
 
 ## Pin assigment
 Please keep in mind that the CPU of the BBB can be destroyed, if the voltage at the expansion header pins is higher than 3.3 Volt. So it is a good choice to use Level Shifter on each used expansion header pin (P8 and P9). You can use Level Shifter in 3.3 Volt to 3.3 Volt configuration to protect BBB expansion header pins which are connected to 3.3 Volt signals.
