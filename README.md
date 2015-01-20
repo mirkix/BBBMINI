@@ -58,6 +58,8 @@ or
 ## Pin assigment
 Please keep in mind that the CPU of the BBB can be destroyed, if the voltage at the expansion header pins is higher than 3.3 Volt. So it is a good choice to use Level Shifter on each used expansion header pin (P8 and P9). You can use Level Shifter in 3.3 Volt to 3.3 Volt configuration to protect BBB expansion header pins which are connected to 3.3 Volt signals.
 
+NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR.
+
 ### RCInput
 BBB | RC Receiver | Remark
 ------------ | ------------- | -------------
