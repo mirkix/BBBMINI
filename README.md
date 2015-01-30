@@ -23,6 +23,7 @@ For instructions how to get, build, test and run the software click [here](doc/s
 ## Status
 
 ### Working
+* RT-Kernel
 * MPU-9250 (via SPI)
 * MS5611 (via SPI)
 * RCInput with Spektrum SPM 9645
@@ -31,6 +32,5 @@ For instructions how to get, build, test and run the software click [here](doc/s
 
 ### ToDo
 * Solder the breakout boards on a prototype cape, so it is reliable to fly.
-* Update to RT-Kernel
 * Check RCOutput
 
