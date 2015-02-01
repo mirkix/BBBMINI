@@ -27,10 +27,9 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * MPU-9250 (via SPI)
 * MS5611 (via SPI)
 * RCInput with Spektrum SPM 9645
+* RCOutput
 * GPS uBlox NEO-M8N (5Hz with GPS + GLONASS)
 * IP connection via WLAN to groundstation (APM Planner) 
 
 ### ToDo
 * Solder the breakout boards on a prototype cape, so it is reliable to fly.
-* Check RCOutput
-
