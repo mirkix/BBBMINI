@@ -40,6 +40,8 @@ P9.31 SPI1_SCLK | SCLK / SCL
 P9.42 MS5611_CS | MS5611_CS
 
 ### GPS
+Baudrate 38400, 8, n, 1
+
 BBB | GPS | Remark
 ------------ | ------------- | -------------
 P9.01 DGND | GND | 
