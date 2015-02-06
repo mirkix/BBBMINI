@@ -32,4 +32,5 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * IP connection via WLAN to groundstation (APM Planner) 
 
 ### ToDo
+* Create dts file for BBBMINI
 * Solder the breakout boards on a prototype cape, so it is reliable to fly.
