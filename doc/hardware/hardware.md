@@ -1,15 +1,12 @@
 #Hardware
 ## Pin assigment
-Please keep in mind that the CPU of the BBB can be destroyed, if the voltage at the expansion header pins is higher than 3.3 Volt. So it is a good choice to use level shifter on each used expansion header pin (P8 and P9). You can use level shifter in 3.3 Volt to 3.3 Volt configuration to protect BBB expansion header pins which are connected to 3.3 Volt signals.
-
-NOTE: DO NOT APPLY VOLTAGE TO ANY I/O PIN WHEN POWER IS NOT SUPPLIED TO THE BOARD. IT WILL DAMAGE THE PROCESSOR.
 
 ### RCInput
 BBB | RC Receiver | Remark
 ------------ | ------------- | -------------
 P9.01 DGND | GND
 P9.03 VDD_3V3 | VDD | 3.3 Volt for Spektrum Satellit SPM 9645
-P8.15 RC_IN_3V3 | RC Out (Spektrum / PPM-sum) | The Spektrum output is 3 Volt, check if Level Shifter is required 
+P8.15 RC_IN_3V3 | RC Out (Spektrum / PPM-sum) | The Spektrum output is 3 Volt, check if level shifter is required 
 
 ### RCOutput
 BBB | ESC / Servo | Remark
