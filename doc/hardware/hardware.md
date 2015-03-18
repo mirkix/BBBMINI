@@ -5,6 +5,7 @@
 BBB | RC Receiver | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | | 
+P9.03 VDD_3V3 | VDD | |
 P8.15 RC_IN | RC Out | IN | 3.3 Volt (Spektrum / PPM-sum) 
 
 ### RCOutput
