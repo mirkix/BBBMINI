@@ -13,11 +13,13 @@ To start here, Debian should be allready installed on your BBB.
 ###Disable HDMI
 HDMI output should be disabled. Edit `/boot/uEnv.txt` and add `capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN` to `optargs` argument.
 
-###Enable UART5
-UART5 is disabeld by default. To enable UART5 at startup we can edit `/boot/uEnv.txt`. Add `capemgr.enable_partno=BB-UART5` to the optargs argument.
-
 ### `/boot/uEnv.txt` `optargs`example
-`optargs=fixrtc quiet capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN capemgr.enable_partno=BB-UART5 `
+`optargs=fixrtc quiet capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN`
+
+## Install device tree overlay
+You have to install the device tree overlay once.
+
+`sudo ardupilot/Tools/Linux_HAL_Essentials/devicetree/bbbmini/make install`
 
 ## Compile ArduPilot
 `cd ardupilot/ArduCopter`
@@ -37,9 +39,9 @@ then
 `make bbbmini`
 
 ## Run ArduPilot
-Before you can start ArduPilot you have to enable the hardware once after startup:
+Before you can start ArduPilot you have to enable the hardware (load device tree overlay) once after (re)boot:
 
-`sudo ardupilot/Tools/Linux_HAL_Essentials/startup.sh load`
+`sudo ardupilot/Tools/Linux_HAL_Essentials/devicetree/bbbmini/startup.sh load`
 
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
 
