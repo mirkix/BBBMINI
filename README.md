@@ -3,6 +3,8 @@ Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 
 ![alt text](doc/pic/bbbmini.png "BBBMINI breadboard")
 
+![alt text](doc/pic/bbbminiquad.png "BBBMINI Quad")
+
 ## Why?
 * Have fun to build your own BBB ArduPilot Cape
 * Easy start to ArduPilot Linux development
@@ -30,7 +32,9 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * RCOutput
 * GPS uBlox NEO-M8N (5Hz with GPS + GLONASS)
 * IP connection via WLAN to groundstation (APM Planner) 
+* dts file for BBBMINI
+* Solder the breakout boards on a prototype cape, so it is reliable to fly.
+* First flight on March 16, 2015
 
 ### ToDo
-* Create dts file for BBBMINI
-* Solder the breakout boards on a prototype cape, so it is reliable to fly.
+* Create documentation
