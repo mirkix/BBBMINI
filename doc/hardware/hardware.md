@@ -46,12 +46,23 @@ P9.30 SPI1_MOSI | MOSI / SD1 | OUT | 3.3 Volt
 P9.31 SPI1_SCLK | SCLK / SCL | OUT | 3.3 Volt
 P9.42 MS5611_CS | MS5611_CS | OUT | 3.3 Volt
 
-### GPS
+
+### UART4 MAVLink radio module
+Baudrate 57600, 8, n, 1
+
+BBB | Radio | I/O | Remark
+------------ | ------------- | ------------- | -------------
+P9.01 DGND | GND | 
+P9.13 TX | RADIO_RX | OUT | 3.3 Volt 
+P9.11 RX | RADIO_TX | IN | 3.3 Volt
+
+
+### UART5 GPS
 Baudrate 38400, 8, n, 1
 
 BBB | GPS | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | 
-P8.37 GPS_TX | GPS_RX | OUT | 3.3 Volt 
-P8.38 GPS_RX | GPS_TX | IN | 3.3 Volt
+P8.37 TX | GPS_RX | OUT | 3.3 Volt 
+P8.38 RX | GPS_TX | IN | 3.3 Volt
 
