@@ -31,7 +31,8 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * RCInput with Spektrum SPM 9645
 * RCOutput
 * GPS uBlox NEO-M8N (5Hz with GPS + GLONASS)
-* IP connection via WLAN to groundstation (APM Planner) 
+* IP connection via WLAN to Ground Station (APM Planner) 
+* Connection to Ground Station (APM Planner) via radio module
 * dts file for BBBMINI
 * Solder the breakout boards on a prototype cape, so it is reliable to fly.
 * First flight on March 16, 2015
