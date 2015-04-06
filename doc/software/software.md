@@ -57,11 +57,17 @@ or
 
 `sudo ardupilot/APMrover2/APMrover2.elf`
 
-To connect a MAVLINK groundstation add `-A udp:192.168.178.26:14550`
+To connect a MAVLink groundstation add `-A udp:192.168.178.26:14550`
+
+To use MAVLink via radio connected to UART4 add `-C /dev/ttyO4`. 
 
 If there is a GPS connected to UART5 add `-B /dev/ttyO5`. 
 
-Example: MAVLINK groundstation with IP 192.168.178.26 on port 14550 and GPS connected to `/dev/ttyO5` UART5.
+Example: MAVLink groundstation with IP 192.168.178.26 on port 14550 and GPS connected to `/dev/ttyO5` UART5.
 
 `sudo ardupilot/ArduCopter/ArduCopter.elf -A udp:192.168.178.26:14550 -B /dev/ttyO5`
+
+Example: MAVLink groundstation via radio connected to UART4 and GPS connected to `/dev/ttyO5` UART5.
+
+`sudo ardupilot/ArduCopter/ArduCopter.elf -B /dev/ttyO5 -C /dev/ttyO4`
 
