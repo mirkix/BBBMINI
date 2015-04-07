@@ -11,7 +11,7 @@ P8.15 RC_IN | RC Out | IN | 3.3 Volt (Spektrum / PPM-sum)
 ### RCOutput
 BBB | ESC / Servo | I/O | Remark
 ------------ | ------------- | ------------- | -------------
-P9.01 DGND | GND | 
+P8.01 DGND | GND | 
 P8.28 | RC_OUT_CH_1 | OUT | 3.3 Volt
 P8.27 | RC_OUT_CH_2 | OUT | 3.3 Volt
 P8.30 | RC_OUT_CH_3 | OUT | 3.3 Volt
@@ -62,7 +62,15 @@ Baudrate 38400, 8, n, 1
 
 BBB | GPS | I/O | Remark
 ------------ | ------------- | ------------- | -------------
-P9.01 DGND | GND | 
+P8.01 DGND | GND | 
 P8.37 TX | GPS_RX | OUT | 3.3 Volt 
 P8.38 RX | GPS_TX | IN | 3.3 Volt
 
+
+### CAN1 UAVCAN
+You have to use a CAN transceiver (e.g. MCP 2562-E/P) for CAN datatransfer.
+
+BBB | I/O | Remark
+------------ | ------------- | -------------
+P9.24 RX | IN | 3.3 Volt 
+P9.26 TX | OUT | 3.3 Volt
