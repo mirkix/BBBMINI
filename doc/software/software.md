@@ -1,5 +1,5 @@
 # Software
-To start here, Debian should be allready installed on your BBB.
+To start here, Debian should already be installed on your BBB.
 
 ## Get required software on the BBB
 ###Tools
@@ -21,22 +21,54 @@ You have to install the device tree overlay once.
 
 `sudo ardupilot/Tools/Linux_HAL_Essentials/devicetree/bbbmini/make install`
 
-## Compile ArduPilot
-`cd ardupilot/ArduCopter`
+## Compile ArduPilot natively on the BBB
+`cd ardupilot/ArduCopter` for ArduCopter
 
 or
 
-`cd ardupilot/ArduPlane`
+`cd ardupilot/ArduPlane` for ArduPlane
 
 or 
 
-`cd ardupilot/APMrover2`
+`cd ardupilot/APMrover2` for APMRover
 
 then
 
 `make configure`
 
 `make bbbmini`
+
+At the moment is it not possible to compile ArduPilot natively on the BBB, because the compiler `gcc` 4.6 and `gcc` 4.7 crash when compiling the file `AP_InertialSensor.cpp` ([ APM for Linux does not compile natively #1986 ](https://github.com/diydrones/ardupilot/issues/1986)). As a workaround compile ArduPilot with a Ubuntu computer, see Cross compile ArduPilot for further instructions.
+
+## Cross compile ArduPilot 
+
+To compile ArduPilot for the BBB on a Ubuntu computer the following packages are required:
+
+`sudo apt.get install git gawk g++-arm-linux-gnueabihf`
+
+Now get the source code:
+
+`git clone https://github.com/diydrones/ardupilot.git`
+
+choose what to build:
+
+`cd ardupilot/ArduCopter` for ArduCopter
+
+or
+
+`cd ardupilot/ArduPlane` for ArduPlane
+
+or 
+
+`cd ardupilot/APMrover2` for APMRover
+
+then
+
+`make configure`
+
+`make bbbmini`
+
+use `scp` to copy the .ELF executable to the BBB.
 
 ## Run ArduPilot
 Before you can start ArduPilot you have to enable the hardware (load device tree overlay) once after (re)boot:
