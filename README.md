@@ -10,7 +10,7 @@ Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 * Easy start to ArduPilot Linux development
 * No SMD soldering required
 
-## Hardware
+## [Hardware](doc/hardware/hardware.md)
 * BeagleBone Black
 * BeagleBone Black Proto Cape with IMU MPU-9250 breakout board and Baro MS5611 breakout board (try to get a combi breakout board)
 * Spektrum Satellit SPM 9645, PPM-sum should also work
@@ -19,7 +19,7 @@ Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 
 Click [here](doc/hardware/hardware.md) for further instruction how to assemble the board and the pin assignment.
 
-## Software
+## [Software](doc/software/software.md)
 For instructions how to get, build, test and run the software click [here](doc/software/software.md).
 
 ## Status
