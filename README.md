@@ -39,4 +39,5 @@ For instructions how to get, build, test and run the software click [here](doc/s
 
 ### ToDo
 * Create documentation
+* Develop a BBBMINI printed circuit board, if someone wants to help, please contact me.
 * Add CAN bus for UAVCAN
