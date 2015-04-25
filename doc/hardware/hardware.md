@@ -40,9 +40,9 @@ BBB | MPU-9250 | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | |
 P9.03 VDD_3V3 | VDD | |
-P9.28 MPU9250_CS | MPU9250_CS | OUT | 3.3 Volt
+P9.28 MPU9250_CS | MPU9250_CS / nCS | OUT | 3.3 Volt
 P9.29 SPI1_MISO | MISO / SD0 | IN | 3.3 Volt
-P9.30 SPI1_MOSI | MOSI / SD1 | OUT | 3.3 Volt
+P9.30 SPI1_MOSI | MOSI / SD1 / SDA / SDI | OUT | 3.3 Volt
 P9.31 SPI1_SCLK | SCLK / SCL | OUT | 3.3 Volt
 
 
@@ -52,9 +52,10 @@ BBB | MS 5611 | I/O | Remark
 P9.01 DGND | GND | |
 P9.03 VDD_3V3 | VDD | |
 P9.29 SPI1_MISO | MISO / SDO | IN | 3.3 Volt
-P9.30 SPI1_MOSI | MOSI / SD1 | OUT | 3.3 Volt
+P9.30 SPI1_MOSI | MOSI / SD1 / SDA | OUT | 3.3 Volt
 P9.31 SPI1_SCLK | SCLK / SCL | OUT | 3.3 Volt
-P9.42 MS5611_CS | MS5611_CS | OUT | 3.3 Volt
+P9.42 MS5611_CS | MS5611_CS / CSB | OUT | 3.3 Volt
+ | PS | | Connect to GND to switch to SPI communication
 
 
 ### UART4 MAVLink radio module
