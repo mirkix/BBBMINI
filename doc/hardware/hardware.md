@@ -9,16 +9,20 @@ P9.01 DGND | UBEC-GND | |
 P9.07 and P9.08 SYS_5V | UBEC-5V | P9.07 and P9.08 are connected to the power plug of the BBB  |
 
 
-## Pin assigment
+## RCInput
 
-### RCInput
+### Pin assigment
+
 BBB | RC Receiver | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | | 
 P9.03 VDD_3V3 | VDD | |
 P8.15 RC_IN | RC Out | IN | 3.3 Volt (Spektrum / PPM-sum) 
 
-### RCOutput
+## RCOutput
+
+### Pin assigment
+
 BBB | ESC / Servo | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P8.01 DGND | GND | 
@@ -35,7 +39,15 @@ P8.43 | RC_OUT_CH_10 | OUT | 3.3 Volt
 P8.46 | RC_OUT_CH_11 | OUT | 3.3 Volt
 P8.45 | RC_OUT_CH_12 | OUT | 3.3 Volt
 
-### IMU MPU-9250
+## IMU MPU-9250
+
+### Alignment
+
+![MPU-9250 alignment](../pic/9250.png)
+
+
+### Pin assigment
+
 BBB | MPU-9250 | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | |
@@ -46,7 +58,10 @@ P9.30 SPI1_MOSI | MOSI / SD1 / SDA / SDI | OUT | 3.3 Volt
 P9.31 SPI1_SCLK | SCLK / SCL | OUT | 3.3 Volt
 
 
-### Baro MS 5611
+## Baro MS 5611
+
+### Pin assigment
+
 BBB | MS 5611 | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | |
@@ -58,8 +73,10 @@ P9.42 MS5611_CS | MS5611_CS / CSB | OUT | 3.3 Volt
  | PS | | Connect to GND to switch to SPI communication
 
 
-### UART4 MAVLink radio module
+## UART4 MAVLink radio module
 Baudrate 57600, 8, n, 1
+
+### Pin assigment
 
 BBB | Radio | I/O | Remark
 ------------ | ------------- | ------------- | -------------
@@ -68,8 +85,10 @@ P9.13 TX | RADIO_RX | OUT | 3.3 Volt
 P9.11 RX | RADIO_TX | IN | 3.3 Volt
 
 
-### UART5 GPS
+## UART5 GPS
 Baudrate 38400, 8, n, 1
+
+### Pin assigment
 
 BBB | GPS | I/O | Remark
 ------------ | ------------- | ------------- | -------------
@@ -78,8 +97,10 @@ P8.37 TX | GPS_RX | OUT | 3.3 Volt
 P8.38 RX | GPS_TX | IN | 3.3 Volt
 
 
-### CAN1 UAVCAN
+## CAN1 UAVCAN
 You have to use a CAN transceiver (e.g. MCP 2562-E/P) for CAN datatransfer.
+
+### Pin assigment
 
 BBB | I/O | Remark
 ------------ | ------------- | -------------
