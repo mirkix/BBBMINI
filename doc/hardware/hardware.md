@@ -73,6 +73,20 @@ P9.42 MS5611_CS | MS5611_CS / CSB | OUT | 3.3 Volt
  | PS | | Connect to GND to switch to SPI communication
 
 
+## Optical Flow ADNS 3080
+
+### Pin assigment
+
+BBB | MS 5611 | I/O | Remark
+------------ | ------------- | ------------- | -------------
+P9.01 DGND | GND | |
+P9.03 VDD_3V3 | VDD | |
+P9.21 SPI0_MISO | MISO  | IN | 3.3 Volt
+P9.18 SPI0_MOSI | MOSI  | OUT | 3.3 Volt
+P9.22 SPI0_SCLK | SCLK  | OUT | 3.3 Volt
+P9.17 ADNS3080_CS | NCS | OUT | 3.3 Volt
+
+
 ## UART4 MAVLink radio module
 Baudrate 57600, 8, n, 1
 
