@@ -1,12 +1,12 @@
 #Hardware
 
 ## Power supply
-For the power supply of the BBB I use a 5V 3A UBEC module.
+For supplying power of the BBB I use a 5V 3A UBEC module.
 
 BBB | UBEC | Remark
 ------------ | ------------- | -------------
-P9.01 DGND | UBEC-GND | | 
-P9.07 and P9.08 SYS_5V | UBEC-5V | P9.07 and P9.08 are connected to the power plug of the BBB  |
+P9.01 P9.02DGND | UBEC-GND | | 
+P9.05 and P9.06 VDD_5V | UBEC-5V | P9.05 and P9.06 are connected to the power plug of the BBB  |
 
 
 ## RCInput
