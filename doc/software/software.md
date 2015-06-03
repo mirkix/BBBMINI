@@ -1,26 +1,31 @@
 # Software
-To start here, Debian should already be installed on your BBB.
 
-## Get required software on the BBB
-###Tools
-`apt-get install git make gawk g++ arduino-core`
+There is now a prebuild image which make things easier.
 
-### ArduPilot sourcecode 
-`git clone git://github.com/diydrones/ardupilot.git`
+The image includes:
+* Debain 8 jessie
+* GCC 4.9
+* Kernel 4.0.4 PREEMPT RT
+* Devicetree for the BBBMINI is already loaded at startup.
 
-## BBB configuration 
+## Prepare BBB
+1. Download Debian image with BBBMINI support here: [bone-debian-8.0-console-bbbmini-armhf-2015-05-08-2gb.img.xz](https://goo.gl/jmjDcO)
 
-###Disable HDMI
-HDMI output should be disabled. Edit `/boot/uEnv.txt` and add `capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN` to `optargs` argument.
+2. Decompress image: `unxz bone-debian-8.0-console-bbbmini-armhf-2015-05-08-2gb.img.xz`
 
-### `/boot/uEnv.txt` `optargs`example
-`optargs=fixrtc quiet capemgr.disable_partno=BB-BONELT-HDMI,BB-BONELT-HDMIN`
+3. Copy image to microSDcard (>= 4GB): `sudo dd if=./bone-debian-8.0-console-bbbmini-armhf-2015-05-08-2gb.img of=/dev/sdX` /dev/sdX should point to your microSDcard, be careful here!!! Use `lsblk` to figure out, which is your mircroSDcard.
 
-## Install device tree overlay
-You have to install the device tree overlay once.
+4. `sync` and remove mircroSDcard 
 
-`sudo ardupilot/Tools/Linux_HAL_Essentials/devicetree/bbbmini/make install`
-
+5. Put microSDcard into BBB
+6. Connect BBB to power
+7. Connect to the BBB `ssh debian@arm`
+8. Password `temppwd`
+9. Install software: `sudo apt-get update` `sudo apt-get install gawk make g++`
+10. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
+11. Grow partition to mircroSDcard size: `sudo /opt/scripts/tools/grow_partition.sh`
+12. Reboot: `sudo reboot`
+ 
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
 
@@ -34,11 +39,7 @@ or
 
 then
 
-`make configure`
-
 `make bbbmini`
-
-At the moment is it not possible to compile ArduPilot natively on the BBB, because the compiler `gcc` 4.6 and `gcc` 4.7 crash when compiling the file `AP_InertialSensor.cpp` ([ APM for Linux does not compile natively #1986 ](https://github.com/diydrones/ardupilot/issues/1986)). As a workaround compile ArduPilot with a Ubuntu computer, see Cross compile ArduPilot for further instructions.
 
 ## Cross compile ArduPilot 
 
@@ -64,17 +65,11 @@ or
 
 then
 
-`make configure`
-
 `make bbbmini`
 
 use `scp` to copy the .ELF executable to the BBB.
 
 ## Run ArduPilot
-Before you can start ArduPilot you have to enable the hardware (load device tree overlay) once after (re)boot:
-
-`sudo ardupilot/Tools/Linux_HAL_Essentials/devicetree/bbbmini/startup.sh load`
-
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
 
 then you can start ArduPilot:
