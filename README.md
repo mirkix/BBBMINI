@@ -36,8 +36,9 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * dts file for BBBMINI
 * Solder the breakout boards on a prototype cape, so it is reliable to fly.
 * First flight on March 16, 2015
+* Create documentation / schematic
+* Develop a BBBMINI printed circuit board
+* Add CAN bus for UAVCAN
 
 ### ToDo
-* Create documentation / schematic
-* Develop a BBBMINI printed circuit board, if someone wants to help, please contact me.
-* Add CAN bus for UAVCAN
+
