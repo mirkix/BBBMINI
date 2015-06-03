@@ -5,6 +5,8 @@ Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 
 ![alt text](doc/pic/bbbminiquad.png "BBBMINI Quad")
 
+![alt text](doc/pic/bbbminipcbquad.png "BBBMINI Quad")
+
 ## Why?
 * Have fun to build your own BBB ArduPilot Cape
 * Easy start to ArduPilot Linux development
@@ -36,7 +38,7 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * dts file for BBBMINI
 * Solder the breakout boards on a prototype cape, so it is reliable to fly.
 * First flight on March 16, 2015
-* Create documentation / schematic
+* Create documentation / [schematic](doc/pic/bbbmini.pdf)
 * Develop a BBBMINI printed circuit board
 * Add CAN bus for UAVCAN
 
