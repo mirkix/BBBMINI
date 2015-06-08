@@ -21,7 +21,7 @@ The image includes:
 6. Connect BBB to power
 7. Connect to the BBB `ssh debian@arm`
 8. Password `temppwd`
-9. Install software: `sudo apt-get update` `sudo apt-get install gawk make g++`
+9. Install software: `sudo apt-get update && sudo apt-get install gawk make g++`
 10. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
 11. Grow partition to mircroSDcard size: `sudo /opt/scripts/tools/grow_partition.sh`
 12. Reboot: `sudo reboot`
@@ -45,7 +45,7 @@ then
 
 To compile ArduPilot for the BBB on a Ubuntu computer the following packages are required:
 
-`sudo apt.get install git gawk g++-arm-linux-gnueabihf`
+`sudo apt-get install git gawk g++-arm-linux-gnueabihf`
 
 Now get the source code:
 
