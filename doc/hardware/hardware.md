@@ -6,7 +6,7 @@
 [Schematic](../pic/bbbmini.pdf)
 
 ### PCB
-[PCB](../pic/pcb.png)
+![PCB](../pic/pcb.png)
 
 ## Power supply
 For supplying power of the BBB I use a 5V 3A UBEC module.
