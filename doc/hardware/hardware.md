@@ -13,7 +13,7 @@ For supplying power to the BBB I use a 5V 3A UBEC module.
 
 BBB | UBEC | Remark
 ------------ | ------------- | -------------
-P9.01 and P9.02D GND | UBEC-GND | | 
+P9.01 and P9.02 GND | UBEC-GND | | 
 P9.05 and P9.06 VDD_5V | UBEC-5V | P9.05 and P9.06 are connected to the power plug of the BBB  |
 
 
@@ -25,7 +25,7 @@ BBB | RC Receiver | I/O | Remark
 ------------ | ------------- | ------------- | -------------
 P9.01 DGND | GND | | 
 P9.03 VDD_3V3 | VDD | |
-P8.15 RC_IN | RC Out | IN | 3.3 Volt (Spektrum / PPM-sum) 
+P8.15 RC_IN | RC Out | IN | 3.3 Volt (Spektrum / SBUS / PPM-Sum) 
 
 ## RCOutput
 
