@@ -15,7 +15,7 @@ Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 ## [Hardware](doc/hardware/hardware.md)
 * BeagleBone Black
 * BeagleBone Black Proto Cape with IMU MPU-9250 breakout board and Baro MS5611 breakout board (try to get a GY-9250 and GY-63 breakout board)
-* Spektrum Satellit SPM 9645, PPM-sum should also work
+* Spektrum Satellit SPM 9645, SBUS, PPM-Sum
 * Level shifter 3.3 Volt to 5 Volt (bidirectional)
 * GPS
 
