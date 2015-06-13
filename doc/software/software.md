@@ -22,9 +22,10 @@ The image includes:
 7. Connect to the BBB `ssh debian@arm`
 8. Password `temppwd`
 9. Install software: `sudo apt-get update && sudo apt-get install gawk make g++`
-10. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
-11. Grow partition to mircroSDcard size: `sudo /opt/scripts/tools/grow_partition.sh`
-12. Reboot: `sudo reboot`
+10. Uninstall Apache2: `sudo apt-get remove apache2`
+11. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
+12. Grow partition to mircroSDcard size: `sudo /opt/scripts/tools/grow_partition.sh`
+13. Reboot: `sudo reboot`
  
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
