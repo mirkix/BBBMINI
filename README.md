@@ -43,4 +43,4 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * Add CAN bus for UAVCAN
 
 ### ToDo
-
+* Add HC-SR04 Ultrasonic Module support to BBBMINI
