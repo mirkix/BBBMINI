@@ -1,12 +1,12 @@
 #Hardware
 
-## BBBMINIadapter
+## BBBMINI-PCB
 
 ### Schematic
-[Schematic](../pic/bbbmini.pdf)
+![Schematic](https://github.com/mirkix/BBBMINI-PCB/blob/master/schematic/bbbmini.pdf)
 
 ### PCB
-![PCB](../pic/pcb.png)
+![PCB](https://github.com/mirkix/BBBMINI-PCB/blob/master/picture/bbbmini.png)
 
 ## Power supply
 For supplying power to the BBB I use a 5V 3A UBEC module.
