@@ -41,6 +41,6 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * Create documentation / [schematic](doc/pic/bbbmini.pdf)
 * Develop a BBBMINI printed circuit board
 * Add CAN bus for UAVCAN
+* Add HC-SR04 Ultrasonic Module support to BBBMINI
 
 ### ToDo
-* Add HC-SR04 Ultrasonic Module support to BBBMINI
