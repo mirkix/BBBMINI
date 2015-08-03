@@ -25,7 +25,7 @@ The image includes:
 10. Update software: `sudo apt-get upgrade`
 11. Install Kernel: `sudo apt-get install linux-image-4.0.8-bone-rt-r8 linux-firmware-image-4.0.8-bone-rt-r8`
 12. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-13. Install software: `sudo apt-get install g++ gawk git make ti-pru-cgt-installer`
+13. Install software: `sudo apt-get install g++ gawk git make ti-pru-cgt-installer device-tree-compiler`
 14. Uninstall Apache2: `sudo apt-get remove apache2`
 15. Reboot system: `sudo reboot`
 16. Login again
