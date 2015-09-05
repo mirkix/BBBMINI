@@ -3,20 +3,16 @@
 There is now a prebuild image which make things easier.
 
 The image includes:
-* Debian 8 jessie
+* Debian 8.1 jessie
 * GCC 4.9
 * Kernel 4.0.8 PREEMPT RT
 * Devicetree for the BBBMINI is already loaded at startup.
 
 ## Prepare BBB
 1. Download Debian image here: [bone-debian-8.1-console-armhf-2015-06-11-2gb.img.xz](https://rcn-ee.com/rootfs/2015-06-11/microsd/bone-debian-8.1-console-armhf-2015-06-11-2gb.img.xz)
-
 2. Decompress image: `unxz one-debian-8.1-console-armhf-2015-06-11-2gb.img.xz`
-
 3. Copy image to microSDcard (>= 4GB): `sudo dd if=./one-debian-8.1-console-armhf-2015-06-11-2gb.img of=/dev/sdX` /dev/sdX should point to your microSDcard, be careful here!!! Use `lsblk` to figure out, which is your mircroSDcard.
-
 4. `sync` and remove mircroSDcard 
-
 5. Put microSDcard into BBB
 6. Connect BBB to power
 7. Connect to the BBB `ssh debian@arm`
@@ -29,10 +25,17 @@ The image includes:
 14. Uninstall Apache2: `sudo apt-get remove apache2`
 15. Reboot system: `sudo reboot`
 16. Login again
-17. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
-18. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-19. Build Rangefinder firmware: `make`
-20. Install Rangefinder firmware: `sudo make install`
+17. Get latest Device Tree files: `git clone https://github.com/RobertCNelson/dtb-rebuilder.git`
+18. Change dir: `cd dtb-rebuilder`
+19. Choose branch: `git checkout 4.0.x`
+20. Make clean: `make clean`
+21. Build Device Tree files: `make`
+22. Install Device Tree files: `sudo make install`
+23. Change to home dir: `cd`
+24. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
+25. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+26. Build Rangefinder firmware: `make`
+27. Install Rangefinder firmware: `sudo make install`
 
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
@@ -86,7 +89,7 @@ then you can start ArduPilot:
 
 or
 
-`sudo ardupilot/ArduPlan/ArduPlan.elf`
+`sudo ardupilot/ArduPlane/ArduPlane.elf`
 
 or
 
