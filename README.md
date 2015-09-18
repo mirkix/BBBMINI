@@ -1,4 +1,6 @@
 # BBBMINI
+
+[![Join the chat at https://gitter.im/mirkix/BBBMINI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mirkix/BBBMINI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 
 ![alt text](doc/pic/bbbmini.png "BBBMINI breadboard")
