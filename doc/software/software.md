@@ -9,7 +9,7 @@ The image includes:
 * Devicetree for the BBBMINI is already loaded at startup.
 
 ## Prepare BBB
-1. Download Debian image here: [bone-debian-8.1-console-armhf-2015-06-11-2gb.img.xz](https://rcn-ee.com/rootfs/2015-06-11/microsd/bone-debian-8.1-console-armhf-2015-06-11-2gb.img.xz)
+1. Download Debian image here: [bone-debian-8.2-console-armhf-2015-09-11-2gb.img.xz](https://rcn-ee.com/rootfs/2015-09-11/microsd/bone-debian-8.2-console-armhf-2015-09-11-2gb.img.xz)
 2. Decompress image: `unxz one-debian-8.1-console-armhf-2015-06-11-2gb.img.xz`
 3. Copy image to microSDcard (>= 4GB): `sudo dd if=./one-debian-8.1-console-armhf-2015-06-11-2gb.img of=/dev/sdX` /dev/sdX should point to your microSDcard, be careful here!!! Use `lsblk` to figure out, which is your mircroSDcard.
 4. `sync` and remove mircroSDcard 
