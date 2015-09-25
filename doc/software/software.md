@@ -3,7 +3,7 @@
 There is now a prebuild image which make things easier.
 
 The image includes:
-* Debian 8.1 jessie
+* Debian 8.2 jessie
 * GCC 4.9
 * Kernel 4.0.8 PREEMPT RT
 * Devicetree for the BBBMINI is already loaded at startup.
