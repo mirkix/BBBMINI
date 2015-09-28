@@ -15,8 +15,6 @@ If your board is ready, check the functionality.
 
 `sudo ./BARO_generic.elf`
 
-The baro check failed here (`PANIC: AP_Baro::read unsuccessful for more than 500ms in AP_Baro::calibrate [2]`), but the baro is working correct in ArduPilot. Have to check that.
-
 ## Check GPS
 `cd ardupilot/libraries/AP_GPS/examples/GPS_AUTO_test`
 
