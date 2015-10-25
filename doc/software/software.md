@@ -36,6 +36,8 @@ The image includes:
 25. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
 26. Build Rangefinder firmware: `make`
 27. Install Rangefinder firmware: `sudo make install`
+28. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+29. `cpufreq-info` shows your current frequency
 
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
