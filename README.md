@@ -28,13 +28,15 @@ Click [here](doc/hardware/hardware.md) for further instruction how to assemble t
 ## [Software](doc/software/software.md)
 For instructions how to get, build, test and run the software click [here](doc/software/software.md).
 
+## 
+
 ## Status
 
 ### Working
 * RT-Kernel
 * MPU-9250 (via SPI)
 * MS5611 (via SPI)
-* RCInput with Spektrum SPM 9645
+* RCInput with Spektrum SPM 9645, FrSky X8R
 * RCOutput
 * GPS uBlox NEO-M8N (5Hz with GPS + GLONASS)
 * IP connection via WLAN to Ground Station (APM Planner) 
@@ -48,3 +50,9 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * Add HC-SR04 Ultrasonic Module support to BBBMINI
 
 ### ToDo
+
+### License
+
+[GPLv3](http://www.gnu.org/licenses/gpl.html)
+
+This is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](http://www.gnu.org/licenses/gpl.html) for more details.
