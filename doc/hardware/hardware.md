@@ -49,11 +49,6 @@ P8.45 | RC_OUT_CH_12 | OUT | 3.3 Volt
 
 ## IMU MPU-9250
 
-### Alignment
-
-![MPU-9250 alignment](../pic/9250.png)
-
-
 ### Pin assigment
 
 BBB | MPU-9250 | I/O | Remark
