@@ -1,7 +1,5 @@
 # BBBMINI
 
-[![Join the chat at https://gitter.im/mirkix/BBBMINI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mirkix/BBBMINI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Simple ArduPilot DIY Cape for the BeagleBone Black (BBB)
 
 ![alt text](doc/pic/bbbmini.png "BBBMINI breadboard")
@@ -50,6 +48,16 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * Add HC-SR04 Ultrasonic Module support to BBBMINI
 
 ### ToDo
+
+### Support
+
+## Chat
+
+[![Join the chat at https://gitter.im/mirkix/BBBMINI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mirkix/BBBMINI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## User Group
+
+[DIYdrones BBBMINI User Group](http://diydrones.com/group/bbbmini)
 
 ### License
 
