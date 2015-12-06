@@ -12,8 +12,6 @@ How to prepare your BeagleBone Black to use as BBBMINI.
 2. Decompress image: `unxz BBB-eMMC-flasher-debian-8.2-console-armhf-2015-11-29-2gb.img.xz`
 3. Copy image to microSDcard (>= 4GB): `sudo dd if=./BBB-eMMC-flasher-debian-8.2-console-armhf-2015-11-29-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
 4. `sync` and remove mircroSD 
-5. Put microSD into BBB
-
 
 ## Install Debian to your BeagleBone Black eMMC
 1. Plug prepared microSD into BBB
@@ -27,19 +25,17 @@ How to prepare your BeagleBone Black to use as BBBMINI.
 9. Update software: `sudo apt-get update`
 10. Update software: `sudo apt-get upgrade`
 11. Install software: `sudo apt-get install g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen`
-13. Uninstall Apache2: `sudo apt-get remove apache2`
-14. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
-15. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-16. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
-17. `cpufreq-info` shows your current frequency
-18. Reboot system: `sudo reboot`
-19. Login again: `ssh debian@beaglebone`
-20. Change to home dir: `cd`
-21. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
-22. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-23. Build Rangefinder firmware: `make`
-24. Install Rangefinder firmware: `sudo make install`
-25. Your BeagleBone Black is now ready to use.
+12. Uninstall Apache2: `sudo apt-get remove apache2`
+13. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
+14. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
+15. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+16. Reboot system: `sudo reboot`
+17. Login again: `ssh debian@beaglebone`
+18. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
+19. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+20. Build Rangefinder firmware: `make`
+21. Install Rangefinder firmware: `sudo make install`
+22. Your BeagleBone Black is now ready to use.
 
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
