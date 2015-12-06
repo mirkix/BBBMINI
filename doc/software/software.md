@@ -1,43 +1,44 @@
 # Software
 
-There is now a prebuild image which make things easier.
+How to prepare your BeagleBone Black to use as BBBMINI.
 
-The image includes:
 * Debian 8.2 jessie
 * GCC 4.9
-* Kernel 4.0.8 PREEMPT RT
+* Kernel 4.1 PREEMPT RT
 * Devicetree for the BBBMINI is already loaded at startup.
 
-## Prepare BBB
-1. Download Debian image here: [bone-debian-8.2-console-armhf-2015-09-11-2gb.img.xz](https://rcn-ee.com/rootfs/2015-09-11/microsd/bone-debian-8.2-console-armhf-2015-09-11-2gb.img.xz)
-2. Decompress image: `unxz bone-debian-8.2-console-armhf-2015-09-11-2gb.img.xz`
-3. Copy image to microSDcard (>= 4GB): `sudo dd if=./bone-debian-8.2-console-armhf-2015-09-11-2gb.img of=/dev/sdX` /dev/sdX should point to your microSDcard, be careful here!!! Use `lsblk` to figure out, which is your mircroSDcard.
-4. `sync` and remove mircroSDcard 
-5. Put microSDcard into BBB
-6. Connect BBB to power
+## Prepare microSD with your host computer
+1. Download Debian image [https://rcn-ee.com/rootfs/bb.org/testing/2015-11-29/console/BBB-eMMC-flasher-debian-8.2-console-armhf-2015-11-29-2gb.img.xz](https://rcn-ee.com/rootfs/bb.org/testing/2015-11-29/console/BBB-eMMC-flasher-debian-8.2-console-armhf-2015-11-29-2gb.img.xz)
+2. Decompress image: `unxz BBB-eMMC-flasher-debian-8.2-console-armhf-2015-11-29-2gb.img.xz`
+3. Copy image to microSDcard (>= 4GB): `sudo dd if=./BBB-eMMC-flasher-debian-8.2-console-armhf-2015-11-29-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
+4. `sync` and remove mircroSD 
+5. Put microSD into BBB
+
+
+## Install Debian to your BeagleBone Black eMMC
+1. Plug prepared microSD into BBB
+2. While holding down the boot button, apply power to the board. If there is a newer Debian installed, holding down the boot button is not necessary.
+3. Wait some minutes until Debian is installed.
+4. Remove power.
+5. Remove microSD.
+6. Apply power again.
 7. Connect to the BBB `ssh debian@arm`
 8. Password `temppwd`
 9. Update software: `sudo apt-get update`
 10. Update software: `sudo apt-get upgrade`
-11. Install Kernel: `sudo apt-get install linux-image-4.0.8-bone-rt-r8 linux-firmware-image-4.0.8-bone-rt-r8`
-12. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-13. Install software: `sudo apt-get install g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen`
-14. Uninstall Apache2: `sudo apt-get remove apache2`
-15. Reboot system: `sudo reboot`
-16. Login again
-17. Get latest Device Tree files: `git clone https://github.com/RobertCNelson/dtb-rebuilder.git`
-18. Change dir: `cd dtb-rebuilder`
-19. Choose branch: `git checkout 4.0.x`
-20. Make clean: `make clean`
-21. Build Device Tree files: `make`
-22. Install Device Tree files: `sudo make install`
-23. Change to home dir: `cd`
-24. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
-25. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-26. Build Rangefinder firmware: `make`
-27. Install Rangefinder firmware: `sudo make install`
-28. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
-29. `cpufreq-info` shows your current frequency
+11. Install software: `sudo apt-get install g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen`
+13. Uninstall Apache2: `sudo apt-get remove apache2`
+14. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
+15. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+16. `cpufreq-info` shows your current frequency
+17. Reboot system: `sudo reboot`
+18. Login again: `ssh debian@arm`
+19. Change to home dir: `cd`
+20. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
+21. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+22. Build Rangefinder firmware: `make`
+23. Install Rangefinder firmware: `sudo make install`
+24. Your BeagleBone Black is now ready to use.
 
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
