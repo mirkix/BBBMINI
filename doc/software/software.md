@@ -18,11 +18,11 @@ How to prepare your BeagleBone Black to use as BBBMINI.
 ## Install Debian to your BeagleBone Black eMMC
 1. Plug prepared microSD into BBB
 2. While holding down the boot button, apply power to the board. If there is a newer Debian installed, holding down the boot button is not necessary.
-3. Wait some minutes until Debian is installed.
+3. Wait some minutes until Debian is installed (all four LEDs turned on).
 4. Remove power.
 5. Remove microSD.
 6. Apply power again.
-7. Connect to the BBB `ssh debian@arm`
+7. Connect to the BBB `ssh debian@beaglebone`
 8. Password `temppwd`
 9. Update software: `sudo apt-get update`
 10. Update software: `sudo apt-get upgrade`
@@ -33,7 +33,7 @@ How to prepare your BeagleBone Black to use as BBBMINI.
 16. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
 17. `cpufreq-info` shows your current frequency
 18. Reboot system: `sudo reboot`
-19. Login again: `ssh debian@arm`
+19. Login again: `ssh debian@beaglebone`
 20. Change to home dir: `cd`
 21. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
 22. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
