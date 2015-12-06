@@ -25,17 +25,16 @@ How to prepare your BeagleBone Black to use as BBBMINI.
 9. Update software: `sudo apt-get update`
 10. Update software: `sudo apt-get upgrade`
 11. Install software: `sudo apt-get cpufrequtils install g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen`
-12. Uninstall Apache2: `sudo apt-get remove apache2`
-13. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
-14. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-15. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
-16. Reboot system: `sudo reboot`
-17. Login again: `ssh debian@beaglebone`
-18. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
-19. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-20. Build Rangefinder firmware: `make`
-21. Install Rangefinder firmware: `sudo make install`
-22. Your BeagleBone Black is now ready to use.
+12. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
+13. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
+14. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+15. Reboot system: `sudo reboot`
+16. Login again: `ssh debian@beaglebone`
+17. Get Ardupilot code: `git clone https://github.com/diydrones/ardupilot.git`
+18. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+19. Build Rangefinder firmware: `make`
+20. Install Rangefinder firmware: `sudo make install`
+21. Your BeagleBone Black is now ready to use.
 
 ## Compile ArduPilot natively on the BBB
 `cd ardupilot/ArduCopter` for ArduCopter
