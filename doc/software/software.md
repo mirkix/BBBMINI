@@ -24,7 +24,7 @@ How to prepare your BeagleBone Black to use as BBBMINI.
 8. Password `temppwd`
 9. Update software: `sudo apt-get update`
 10. Update software: `sudo apt-get upgrade`
-11. Install software: `sudo apt-get install g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen`
+11. Install software: `sudo apt-get cpufrequtils install g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen`
 12. Uninstall Apache2: `sudo apt-get remove apache2`
 13. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
 14. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
