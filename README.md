@@ -49,7 +49,7 @@ For instructions how to get, build, test and run the software click [here](doc/s
 * Dual IMU
 
 ### ToDo
-* Documantation redesign 
+* Documentation redesign 
 
 ## Support
 
