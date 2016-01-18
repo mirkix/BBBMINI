@@ -25,7 +25,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 8. Password `temppwd`
 9. Update software: `sudo apt-get update && sudo apt-get upgrade`
 10. Install software: `sudo apt-get install cpufrequtils g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen -y`
-11. Update script: `cd /opt/scripts && git pull`
+11. Update script: `cd /opt/scripts && sudo git pull`
 12. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
 13. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
 14. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
