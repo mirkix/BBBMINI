@@ -2,15 +2,15 @@
 
 How to prepare your BeagleBone Black to use as BBBMINI.
 
-* Debian 8.2 jessie
+* Debian 8.3 jessie
 * GCC 4.9
 * Kernel 4.1 PREEMPT RT
 * Devicetree for the BBBMINI is already loaded at startup.
 
 ## Prepare microSD with your host computer
-1. Download Debian image [https://rcn-ee.com/rootfs/bb.org/testing/2016-01-03/console/BBB-eMMC-flasher-debian-8.2-console-armhf-2016-01-03-2gb.img.xz](https://rcn-ee.com/rootfs/bb.org/testing/2016-01-03/console/BBB-eMMC-flasher-debian-8.2-console-armhf-2016-01-03-2gb.img.xz)
-2. Decompress image: `unxz BBB-eMMC-flasher-debian-8.2-console-armhf-2016-01-03-2gb.img.xz`
-3. Copy image to microSDcard (>= 4GB): `sudo dd bs=4M if=./BBB-eMMC-flasher-debian-8.2-console-armhf-2016-01-03-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
+1. Download Debian image [https://rcn-ee.com/rootfs/bb.org/testing/2016-01-31/console/BBB-eMMC-flasher-debian-8.3-console-armhf-2016-01-31-2gb.img.xz](https://rcn-ee.com/rootfs/bb.org/testing/2016-01-31/console/BBB-eMMC-flasher-debian-8.3-console-armhf-2016-01-31-2gb.img.xz)
+2. Decompress image: `unxz BBB-eMMC-flasher-debian-8.3-console-armhf-2016-01-31-2gb.img.xz`
+3. Copy image to microSDcard (>= 4GB): `sudo dd bs=4M if=./BBB-eMMC-flasher-debian-8.3-console-armhf-2016-01-31-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
 The process can take 15-30 minutes depending on the speed of your microSD card.
 4. `sync` and remove mircroSD 
 
@@ -26,7 +26,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 9. Update software: `sudo apt-get update && sudo apt-get upgrade`
 10. Install software: `sudo apt-get install cpufrequtils g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen python -y`
 11. Update script: `cd /opt/scripts && sudo git pull`
-12. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts`
+12. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_1`
 13. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
 14. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
 15. Reboot system: `sudo reboot`
