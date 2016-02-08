@@ -48,20 +48,23 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 31. Install Rangefinder firmware: `sudo make install`
 32. Your BeagleBone is now ready to use.
 
-## Compile ArduPilot natively on the BeagleBone
-`cd ardupilot/ArduCopter` for ArduCopter
+## Compile ArduPilot native on BeagleBone
+1. `cd ardupilot`
+2. `alias waf="$PWD/modules/waf/waf-light"`
+3. `waf configure --board=bbbmini`
+4. `waf` (take about 1h20m)
 
-or
+ArduCopter:
+1. `cd build/bbbmini/bin`
+2. `sudo ./arducopter` (plus parameter) 
 
-`cd ardupilot/ArduPlane` for ArduPlane
+ArduPlane:
+1. `cd build/bbbmini/bin`
+2. `sudo ./arduplane` (plus parameter) 
 
-or 
-
-`cd ardupilot/APMrover2` for APMRover
-
-then
-
-`make bbbmini`
+ArduRover:
+1. `cd build/bbbmini/bin`
+2. `sudo ./ardurover` (plus parameter) 
 
 ## Cross compile ArduPilot 
 
@@ -73,23 +76,13 @@ Now get the source code:
 
 `git clone https://github.com/diydrones/ardupilot.git`
 
-choose what to build:
+1. `cd ardupilot`
+2. `alias waf="$PWD/modules/waf/waf-light"`
+3. `waf configure --board=bbbmini`
+4. `waf -j8`
+5. `cd build/bbbmini/bin`
 
-`cd ardupilot/ArduCopter` for ArduCopter
-
-or
-
-`cd ardupilot/ArduPlane` for ArduPlane
-
-or 
-
-`cd ardupilot/APMrover2` for APMRover
-
-then
-
-`make bbbmini`
-
-use `scp` to copy the .ELF executable to the BBB.
+use `scp` to copy the executable to the BeagleBone.
 
 ## Run ArduPilot
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
