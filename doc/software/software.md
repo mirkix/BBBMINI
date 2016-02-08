@@ -55,14 +55,17 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 4. `waf` (take about 1h20m)
 
 ArduCopter:
+
 1. `cd build/bbbmini/bin`
 2. `sudo ./arducopter` (plus parameter) 
 
 ArduPlane:
+
 1. `cd build/bbbmini/bin`
 2. `sudo ./arduplane` (plus parameter) 
 
 ArduRover:
+
 1. `cd build/bbbmini/bin`
 2. `sudo ./ardurover` (plus parameter) 
 
@@ -72,15 +75,14 @@ To compile ArduPilot for the BBB on a Ubuntu computer the following packages are
 
 `sudo apt-get install git gawk g++-arm-linux-gnueabihf`
 
-Now get the source code:
+Get the source code:
 
-`git clone https://github.com/diydrones/ardupilot.git`
-
-1. `cd ardupilot`
-2. `alias waf="$PWD/modules/waf/waf-light"`
-3. `waf configure --board=bbbmini`
-4. `waf -j8`
-5. `cd build/bbbmini/bin`
+1 .`git clone https://github.com/diydrones/ardupilot.git`
+2. `cd ardupilot`
+3. `alias waf="$PWD/modules/waf/waf-light"`
+4. `waf configure --board=bbbmini`
+5. `waf -j8`
+6. `cd build/bbbmini/bin`
 
 use `scp` to copy the executable to the BeagleBone.
 
