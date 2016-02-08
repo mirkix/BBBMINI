@@ -77,7 +77,7 @@ To compile ArduPilot for the BBB on a Ubuntu computer the following packages are
 
 Get the source code:
 
-1 .`git clone https://github.com/diydrones/ardupilot.git`
+1. `git clone https://github.com/diydrones/ardupilot.git`
 2. `cd ardupilot`
 3. `alias waf="$PWD/modules/waf/waf-light"`
 4. `waf configure --board=bbbmini`
