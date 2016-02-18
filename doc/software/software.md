@@ -52,23 +52,9 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 2. `alias waf="$PWD/modules/waf/waf-light"`
 3. `waf configure --board=bbbmini`
 4. `waf` (take about 1h20m)
+5. `cp build/bbbmini/bin/* /home/debian/`
 
-ArduCopter:
-
-1. `cd build/bbbmini/bin`
-2. `sudo ./arducopter` (plus parameter) 
-
-ArduPlane:
-
-1. `cd build/bbbmini/bin`
-2. `sudo ./arduplane` (plus parameter) 
-
-ArduRover:
-
-1. `cd build/bbbmini/bin`
-2. `sudo ./ardurover` (plus parameter) 
-
-## Cross compile ArduPilot 
+## Cross compile ArduPilot (faster)
 
 To compile ArduPilot for BeagleBone on a Ubuntu computer the following packages are required:
 
@@ -84,25 +70,24 @@ Get the source code:
 6. `waf configure --board=bbbmini`
 7. `waf -j8`
 8. `cd build/bbbmini/bin`
-
-use `scp` to copy the executable to the BeagleBone.
+9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
 
-then you can start ArduPilot:
+ArduCopter:
 
-`sudo ardupilot/ArduCopter/ArduCopter.elf`
+1. `sudo /home/debian/arducopter` (plus parameter) 
 
-or
+ArduPlane:
 
-`sudo ardupilot/ArduPlane/ArduPlane.elf`
+1. `sudo /home/arduplane` (plus parameter) 
 
-or
+ArduRover:
 
-`sudo ardupilot/APMrover2/APMrover2.elf`
+1. `sudo /home/ardurover` (plus parameter) 
 
-To connect a MAVLink groundstation add `-C udp:192.168.178.26:14550`
+To connect a MAVLink groundstation with IÜ 192.168.178.26 add `-C udp:192.168.178.26:14550`
 
 To use MAVLink via radio connected to UART4 add `-C /dev/ttyO4`. 
 
@@ -110,9 +95,8 @@ If there is a GPS connected to UART5 add `-B /dev/ttyO5`.
 
 Example: MAVLink groundstation with IP 192.168.178.26 on port 14550 and GPS connected to `/dev/ttyO5` UART5.
 
-`sudo ardupilot/ArduCopter/ArduCopter.elf -C udp:192.168.178.26:14550 -B /dev/ttyO5`
+`sudo /home/debian/arducopter -C udp:192.168.178.26:14550 -B /dev/ttyO5`
 
 Example: MAVLink groundstation via radio connected to UART4 and GPS connected to `/dev/ttyO5` UART5.
 
-`sudo ardupilot/ArduCopter/ArduCopter.elf -B /dev/ttyO5 -C /dev/ttyO4`
-
+`sudo /home/debian/arducopter -B /dev/ttyO5 -C /dev/ttyO4`
