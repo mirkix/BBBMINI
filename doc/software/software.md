@@ -81,11 +81,11 @@ ArduCopter:
 
 ArduPlane:
 
-1. `sudo /home/arduplane` (plus parameter) 
+1. `sudo /home/debian/arduplane` (plus parameter) 
 
 ArduRover:
 
-1. `sudo /home/ardurover` (plus parameter) 
+1. `sudo /home/debian/ardurover` (plus parameter) 
 
 To connect a MAVLink groundstation with IÜ 192.168.178.26 add `-C udp:192.168.178.26:14550`
 
