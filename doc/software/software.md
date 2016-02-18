@@ -69,8 +69,7 @@ Get the source code:
 5. `alias waf="$PWD/modules/waf/waf-light"`
 6. `waf configure --board=bbbmini`
 7. `waf -j8`
-8. `cd build/bbbmini/bin`
-9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
+8. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
