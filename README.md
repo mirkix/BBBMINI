@@ -50,6 +50,31 @@ The BBBmini project development includes:
 * Add redundancy sensors via SPI / I2C or UART
 * Lots of test flights and fine tuning in hardware and software to get a stable and reliable BeagleBone Green flightcontroller
 
+#Why BeagleBone
+
+Once I had the idea to develop an flightcontroller, I have examined on the market available computer for their suitability. The following criteria should be met by the computer being used.
+
+First, the computer should be very well supported by the community. As a result, a Raspberry Pi or BeagleBone could be used. In addition, the flightcontroller should be set up with as little as possible external components.
+
+The decision was made for the BeagleBone. With the Programmable Real-Time Units of the BeagleBone, it is possible to create the BBBmini with only a few sensor breakout boards. In addition the BeagleBone offers many interfaces such as UART, SPI, I2C, CAN, USB and ADC. All these interfaces are used by the BBBmini.
+
+##BeagleBone parts used for BBBmini
+
+* Main CPU running Linux
+* PRU0 device driver for HC-SR04 ultrasonic rangefinder
+* PRU1 to generate 12 PWM signals and receive PPM, S.BUS or spektrum satellite input
+* Grove / I2C for communication to the status display, external compass or Laser rangefinder
+* GROVE / serial 2 for sensors like Laser Rangefinder
+* Serial 4 for telemetry radio
+* Serial 5 for GPS
+* ADC for voltage and current sensing
+* SPI1 for high speed data transfer from IMU and Baro sensor
+* SPI0 for high speed data transfer from second redundant IMU or other hardware
+* CAN for communication with ESCs and additional hardware
+* USB for WiFi and camera connection for life HD video transmission
+* Ethernet for communication on ground
+
+
 # [Hardware](doc/hardware/hardware.md)
 * BeagleBone Black or BeagleBone Green
 * [BBBMINI-PCB](https://github.com/mirkix/BBBMINI-PCB) (recommended) or BeagleBone Proto Cape with IMU MPU-9250 breakout board and Baro MS5611 breakout board (try to get a GY-9250 and GY-63 breakout board)
