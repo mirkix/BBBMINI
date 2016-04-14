@@ -8,13 +8,49 @@ Linux ArduPilot DIY Cape for the BeagleBone Black / Green  (BBB / BBG)
 
 ![alt text](doc/pic/bbbminipcbquad.png "BBBMINI Quad")
 
-## Why?
+# Why?
 * Have fun to build your own BeagleBone ArduPilot Cape
 * Easy start to ArduPilot Linux development
 * No SMD soldering required
 * DIY friendly connector
 
-## [Hardware](doc/hardware/hardware.md)
+# About BBBmini
+BBBmini is an autopilot / flightcontroller Cape for the BeagleBone. BBBmini + BeagleBone can be used as a state of the art Linux autopilot / flightcontroller for Copter, Planes or Rovers. BBBmini can be used with ArduPilot (open source unmanned aerial vehicle flight stack. BBBmini is a DIY project using widely available IMU and barometer breakout sensor boards, there is no SMD soldering necessary. The design is made that everybody can build a BBBmini by himself. In flight internet connection is done via WiFi link.
+
+What does BBBmini offer:
+
+* DIY state of the art UAV autopilot / flightcontroller
+* Easy to build, no SMD soldering necessary
+* Free hardware, free software
+* Autopilot / flightcontroller software is running on Real-Time Linux
+* DIY friendly connectors 0.1” pin header
+* 12 x PWM out with individual frequency for each channel
+* RC in connector for PPM, S.BUS or spektrum satellite input
+* MPU-9250 IMU 9 x DOF
+* MS5611 barometer
+* HC-SR04 ultrasonic rangefinder
+* GPS for full autonomous flights
+* Voltage and current sensing
+* I2C / GROVE connector for Status display and additional sensors
+* SPI connector for second redundant IMU
+* UART / GROVE connector for GPS
+* UART / GROVE connector for telemetry
+* CAN connector with on board CAN bus transceiver
+* USB connector used for WiFi, Laser rangefinder or cameras
+* Excellent cost-performance ratio
+
+The BBBmini project development includes:
+* BBBmini documentation / how to
+* BBBmini PCB design done with Kicad all sources free available on Github
+* Device tree file for BBBmini hardware
+* PRU firmware: 12 x PWM OUT with better than 1us accuracy, separate frequency for each channel. RC input capture with 5ns accuracy, can be used to capture PPM, S.BUS or spektrum satellite
+* PRU firmware: HC-SR04 Ultrasonic Rangefinder device driver
+* Commits to ArduPilot project to get BBBmini supported by ArduPilot
+* Development of status display device driver for ArduPilot
+* Add redundancy sensors via SPI / I2C or UART
+* Lots of test flights and fine tuning in hardware and software to get a stable and reliable BeagleBone Green flightcontroller
+
+# [Hardware](doc/hardware/hardware.md)
 * BeagleBone Black or BeagleBone Green
 * [BBBMINI-PCB](https://github.com/mirkix/BBBMINI-PCB) (recommended) or BeagleBone Proto Cape with IMU MPU-9250 breakout board and Baro MS5611 breakout board (try to get a GY-9250 and GY-63 breakout board)
 * RC receiver (S.BUS, PPM-Sum, Spektrum Satellit SPM 9645)
@@ -23,45 +59,21 @@ Linux ArduPilot DIY Cape for the BeagleBone Black / Green  (BBB / BBG)
 
 Click [here](doc/hardware/hardware.md) for further instruction how to assemble the board and the pin assignment.
 
-## [Software](doc/software/software.md)
+# [Software](doc/software/software.md)
 For instructions how to get, build, test and run the software click [here](doc/software/software.md).
 
-## 
 
-## Status
+# Support
 
-### Working
-* RT-Kernel
-* MPU-9250 (via SPI)
-* MS5611 (via SPI)
-* RCInput with Spektrum SPM 9645, FrSky X8R
-* RCOutput
-* GPS uBlox NEO-M8N (5Hz with GPS + GLONASS)
-* IP connection via WLAN to Ground Station (APM Planner) 
-* Connection to Ground Station (APM Planner) via radio module
-* dts file for BBBMINI
-* Solder the breakout boards on a prototype cape, so it is reliable to fly.
-* First flight on March 16, 2015
-* Create documentation / [schematic](https://github.com/mirkix/BBBMINI-PCB/blob/master/schematic/bbbmini.pdf)
-* Develop a BBBMINI printed circuit board
-* Add CAN bus for UAVCAN
-* Add HC-SR04 Ultrasonic Module support to BBBMINI
-* Dual IMU
-
-### ToDo
-* Documentation redesign 
-
-## Support
-
-### Support Chat
+## Support Chat
 
 [![Join the chat at https://gitter.im/mirkix/BBBMINI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mirkix/BBBMINI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-### User Group
+## User Group
 
 [DIY DRONES BBBMINI User Group](http://diydrones.com/group/bbbmini)
 
-### License
+# License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">BBBmini</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/mirkix" property="cc:attributionName" rel="cc:attributionURL">Mirko Denecke</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
