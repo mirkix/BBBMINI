@@ -2,6 +2,9 @@
 
 Linux ArduPilot DIY Cape for the BeagleBone Black / Green  (BBB / BBG)
 
+[![alt text](https://img.youtube.com/vi/SqyfN3FStvs/0.jpg)](https://youtu.be/SqyfN3FStvs)
+BBBmini flight video
+
 ![alt text](doc/pic/bbbmini.png "BBBMINI breadboard")
 
 ![alt text](doc/pic/bbbminiquad.png "BBBMINI Quad")
