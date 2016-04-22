@@ -33,19 +33,18 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 16. Login again: `ssh debian@beaglebone`
 17. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
 18. Change dir: `cd ./bb.org-overlays`
-19. Update DTC: `./dtc-overlay.sh`
-20. Build and install overlays: `./install.sh`
-21. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
-22. Reboot system: `sudo reboot`
-23. Login again: `ssh debian@beaglebone`
-24. Clone ArduPilot code: `git clone https://github.com/diydrones/ardupilot.git`
-25. Change dir: `cd ardupilot`
-26. Init submodule: `git submodule init`
-27. Clone submodule: `git submodule update`
-28. Change dir: `cd Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-29. Build Rangefinder firmware: `make`
-30. Install Rangefinder firmware: `sudo make install`
-31. Your BeagleBone is now ready to use.
+19. Build and install overlays: `./install.sh`
+20. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
+21. Reboot system: `sudo reboot`
+22. Login again: `ssh debian@beaglebone`
+23. Clone ArduPilot code: `git clone https://github.com/diydrones/ardupilot.git`
+24. Change dir: `cd ardupilot`
+25. Init submodule: `git submodule init`
+26. Clone submodule: `git submodule update`
+27. Change dir: `cd Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+28. Build Rangefinder firmware: `make`
+29. Install Rangefinder firmware: `sudo make install`
+30. Your BeagleBone is now ready to use.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
