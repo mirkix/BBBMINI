@@ -93,3 +93,53 @@ Mount GY-9250 and GY-63
 ### Finish! BBBmini is ready to use for Copter, Planes or Rover.
 
 ![alt text](../pic/build/build_step11.jpg "BBBmini")
+
+
+## Connect BBBmini
+
+### Connect motors and ESC
+![alt text](../pic/connect/esc.png "Connect motors and ESC")
+
+### Connect power distribution
+
+* Connect each ESC to the power distribution board
+* Connect the 5V power distribution board output to BBBmini P11 power input
+* Connect the voltage and current sensing power distribution board output to BBBmini P21 voltage and current sensing pins
+
+![alt text](../pic/connect/power.png "Connect power distribution")
+
+### Connect RC receiver
+![alt text](../pic/connect/rcrx.png "Connect RC receiver")
+
+### Connect display
+![alt text](../pic/connect/display.png "Connect display")
+
+### Connect GPS
+
+* Connect your GPS to P10.
+* P10 +3.3V to GPS VCC
+* P10 GND to GPS GND
+* P10 RX to GPS TX
+* P10 TX to GPS RX
+
+![alt text](../pic/connect/gps.png "Connect GPS")
+
+### Connect telemetry
+
+* Connect your telemetry radio to P7.
+* P7 +5V to telemetry radio VCC
+* P7 GND to telemetry radio GND
+* P7 RX to telemetry radio TX
+* P7 TX to telemetry radio RX
+
+![alt text](../pic/connect/telemetry.png "Connect telemetry")
+
+### Connect HC-SR04
+
+* Connect your HC-SR04 ultrasonic rangefinder
+* P19 +5V to HC-SR04 VCC
+* P19 GND to HC-SR04 GND
+* P19 TRIG to HC-SR04 TRIG
+* P19 ECHO to ECHO TRIG
+
+![alt text](../pic/connect/hcsr04.png "Connect HC-SR04")
