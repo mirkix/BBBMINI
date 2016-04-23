@@ -1,125 +1,95 @@
 #Hardware
 
-## BBBMINI-PCB
-
-### Schematic
+## Schematic
 ![Schematic](https://github.com/mirkix/BBBMINI-PCB/blob/master/schematic/bbbmini.pdf)
 
-### PCB
+## PCB
 ![PCB](https://github.com/mirkix/BBBMINI-PCB/blob/master/picture/bbbmini.png)
 
-## Power supply
-For supplying power to the BBB I use a 5V 3A UBEC module.
+## Assemble BBBmini
 
-BBB | UBEC | Remark
------------- | ------------- | -------------
-P9.01 and P9.02 GND | UBEC-GND | | 
-P9.05 and P9.06 VDD_5V | UBEC-5V | P9.05 and P9.06 are connected to the power plug of the BBB  |
+### Step 1: Solder resistor R4 and R5.
 
+For 3.3V RC input signal use R4 = 0Ω (bridge) and R5 = open (see picture)
 
-## RCInput
+For 5V RC input signal use R4 = 1kΩ and R5 = 2kΩ
 
-### Pin assigment
+![alt text](doc/pic/build/build_step1.jpg "Solder R4 and R5")
 
-BBB | RC Receiver | I/O | Remark
------------- | ------------- | ------------- | -------------
-P9.01 DGND | GND | | 
-P9.03 VDD_3V3 | VDD | |
-P8.15 RC_IN | RC Out | IN | 3.3 Volt (Spektrum / SBUS / PPM-Sum) 
+### Step 2:
 
-## RCOutput
+Solder resistor
 
-### Pin assigment
+R1 = 120Ω
 
-BBB | ESC / Servo | I/O | Remark
------------- | ------------- | ------------- | -------------
-P8.01 DGND | GND | 
-P8.28 | RC_OUT_CH_1 | OUT | 3.3 Volt
-P8.27 | RC_OUT_CH_2 | OUT | 3.3 Volt
-P8.30 | RC_OUT_CH_3 | OUT | 3.3 Volt
-P8.29 | RC_OUT_CH_4 | OUT | 3.3 Volt
-P8.40 | RC_OUT_CH_5 | OUT | 3.3 Volt
-P8.39 | RC_OUT_CH_6 | OUT | 3.3 Volt
-P8.42 | RC_OUT_CH_7 | OUT | 3.3 Volt
-P8.41 | RC_OUT_CH_8 | OUT | 3.3 Volt
-P8.44 | RC_OUT_CH_9 | OUT | 3.3 Volt
-P8.43 | RC_OUT_CH_10 | OUT | 3.3 Volt
-P8.46 | RC_OUT_CH_11 | OUT | 3.3 Volt
-P8.45 | RC_OUT_CH_12 | OUT | 3.3 Volt
+R2 = 1kΩ
 
-## IMU MPU-9250
+R3 = 2kΩ
 
-### Pin assigment
+R6 = 20kΩ 0.1%
 
-BBB | MPU-9250 | I/O | Remark
------------- | ------------- | ------------- | -------------
-P9.01 DGND | GND | |
-P9.03 VDD_3V3 | VDD | |
-P9.28 MPU9250_CS | MPU9250_CS / nCS | OUT | 3.3 Volt
-P9.29 SPI1_MISO | MISO / SD0 | IN | 3.3 Volt
-P9.30 SPI1_MOSI | MOSI / SD1 / SDA / SDI | OUT | 3.3 Volt
-P9.31 SPI1_SCLK | SCLK / SCL | OUT | 3.3 Volt
+R7 = 10kΩ 0.1%
 
+R8 = 20kΩ 0.1%
 
-## Baro MS 5611
+R9 = 10kΩ 0.1%
 
-### Pin assigment
+to the bottom layer. 
 
-BBB | MS 5611 | I/O | Remark
------------- | ------------- | ------------- | -------------
-P9.01 DGND | GND | |
-P9.03 VDD_3V3 | VDD | |
-P9.29 SPI1_MISO | MISO / SDO | IN | 3.3 Volt
-P9.30 SPI1_MOSI | MOSI / SD1 / SDA | OUT | 3.3 Volt
-P9.31 SPI1_SCLK | SCLK / SCL | OUT | 3.3 Volt
-P9.42 MS5611_CS | MS5611_CS / CSB | OUT | 3.3 Volt
- | PS | | Connect to GND to switch to SPI communication
+![alt text](doc/pic/build/build_step2.jpg "Solder R1, R2, R3, R6, R7, R8 and R9")
 
+### Step 3:
 
-## SPI0
+Solder CAN transceiver on the top layer
 
-### Pin assigment
+![alt text](doc/pic/build/build_step3.jpg "Solder CAN transceiver")
 
-BBB | I/O | Remark
------------- | ------------- | ------------- | -------------
-P9.01 DGND | |
-P9.03 VDD_3V3 | |
-P9.21 SPI0_MISO | IN | 3.3 Volt
-P9.18 SPI0_MOSI | OUT | 3.3 Volt
-P9.22 SPI0_SCLK | OUT | 3.3 Volt
-P9.17 SPI0_CS | OUT | 3.3 Volt
+### Step 4:
 
+Solder male pin-header on top layer
 
-## UART4 MAVLink radio module
-Baudrate 57600, 8, n, 1
+P1, P2, P3, P4, P7, P10, P11, P12, P13, P14, P15, P16, P17, P18, P19, P20, P21
 
-### Pin assigment
+![alt text](doc/pic/build/build_step4.jpg "Solder P1, P2, P3, P4, P7, P10, P11, P12, P13, P14, P15, P16, P17, P18, P19, P20, P21")
 
-BBB | Radio | I/O | Remark
------------- | ------------- | ------------- | -------------
-P9.01 DGND | GND | 
-P9.13 TX | RADIO_RX | OUT | 3.3 Volt 
-P9.11 RX | RADIO_TX | IN | 3.3 Volt
+### Step 5:
 
+Solder C1 and C2
 
-## UART5 GPS
-Baudrate 38400, 8, n, 1
+![alt text](doc/pic/build/build_step5.jpg "Solder C1 and C2")
 
-### Pin assigment
+### Step 6:
 
-BBB | GPS | I/O | Remark
------------- | ------------- | ------------- | -------------
-P8.01 DGND | GND | 
-P8.37 TX | GPS_RX | OUT | 3.3 Volt 
-P8.38 RX | GPS_TX | IN | 3.3 Volt
+Solder female pin-header P5 and P6 on top layer
 
+Solder P5 and P6
 
-## CAN1 UAVCAN
-You have to use a CAN transceiver (e.g. MCP 2562-E/P) for CAN datatransfer.
+![alt text](doc/pic/build/build_step6.jpg "Solder P5 and P6")
 
-### Pin assigment
+### Step 7:
 
-BBB | I/O | Remark
------------- | ------------- | -------------
-P9.24 RX | IN | 3.3 Volt 
-P9.26 TX | OUT | 3.3 Volt
+Solder male pin-header P8 and P9 to bottom layer
+
+![alt text](doc/pic/build/build_step7.jpg "Solder P8 and P9")
+
+### Step 8:
+
+Solder male pin-header to bottom layer of GY-9250 and GY-63
+
+![alt text](doc/pic/build/build_step8.jpg "Solder pin-header for GY-9250 and GY-63")
+
+### Step 9:
+
+Mount spacer to BBBmini
+
+![alt text](doc/pic/build/build_step9.jpg "Mount spacer")
+
+### Step 10:
+
+Mount GY-9250 and GY-63
+
+![alt text](doc/pic/build/build_step10.jpg "Mount GY-9250 and GY-63")
+
+### Finish! BBBmini is ready to use for Copter, Planes or Rover.
+
+![alt text](doc/pic/build/build_step11.jpg "BBBmini")
