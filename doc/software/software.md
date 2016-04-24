@@ -23,8 +23,8 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 6. Apply power again.
 7. Connect to the BeagleBone `ssh debian@beaglebone`
 8. Password `temppwd`
-9. Update software: `sudo apt-get update && sudo apt-get upgrade -y`
-10. Install software: `sudo apt-get install -y cpufrequtils g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen python`
+9. Update software: `sudo apt update && sudo apt upgrade -y`
+10. Install software: `sudo apt install -y cpufrequtils g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen python`
 11. Update scripts: `cd /opt/scripts && sudo git pull`
 12. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
 13. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
