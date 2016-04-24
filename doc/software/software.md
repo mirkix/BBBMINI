@@ -53,22 +53,19 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 4. `waf` (take about 1h20m)
 5. `cp build/bbbmini/bin/* /home/debian/`
 
-## Cross compile ArduPilot (faster)
-
-To compile ArduPilot for BeagleBone on a Ubuntu computer the following packages are required:
-
-`sudo apt-get install git gawk g++-arm-linux-gnueabihf`
+## Cross compile ArduPilot (faster) with Ubuntu computer
 
 Get the source code:
 
 1. `git clone https://github.com/diydrones/ardupilot.git`
 2. `cd ardupilot`
-3. `git submodule init`
-4. `git submodule update`
-5. `alias waf="$PWD/modules/waf/waf-light"`
-6. `waf configure --board=bbbmini`
-7. `waf -j8`
-8. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
+3. `./Tools/scripts/install-prereqs-ubuntu.sh`
+4. `git submodule init`
+5. `git submodule update`
+6. `alias waf="$PWD/modules/waf/waf-light"`
+7. `waf configure --board=bbbmini`
+8. `waf -j8`
+9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
