@@ -49,9 +49,10 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
 2. `alias waf="$PWD/modules/waf/waf-light"`
-3. `waf configure --board=bbbmini`
-4. `waf` (take about 1h20m)
-5. `cp build/bbbmini/bin/* /home/debian/`
+3. `git checkout Copter-3.4` for ArduCopter or `git checkout ArduPlane-3.6.0` for ArduPlane
+4. `waf configure --board=bbbmini`
+5. `waf` (take about 1h20m)
+6. `cp build/bbbmini/bin/* /home/debian/`
 
 ## Cross compile ArduPilot (faster) with Ubuntu computer
 
@@ -60,11 +61,12 @@ Get the source code:
 1. `git clone https://github.com/diydrones/ardupilot.git`
 2. `cd ardupilot`
 3. `./Tools/scripts/install-prereqs-ubuntu.sh`
-4. `git submodule init`
-5. `git submodule update`
-6. `alias waf="$PWD/modules/waf/waf-light"`
-7. `waf configure --board=bbbmini`
-8. `waf -j8`
+4. `git checkout Copter-3.4` for ArduCopter or `git checkout ArduPlane-3.6.0` for ArduPlane
+5. `git submodule init`
+6. `git submodule update`
+7. `alias waf="$PWD/modules/waf/waf-light"`
+8. `waf configure --board=bbbmini`
+9. `waf -j8`
 9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
