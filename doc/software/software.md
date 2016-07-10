@@ -51,8 +51,9 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 2. `alias waf="$PWD/modules/waf/waf-light"`
 3. `git checkout Copter-3.4` for ArduCopter or `git checkout ArduPlane-3.6.0` for ArduPlane
 4. `waf configure --board=bbbmini`
-5. `waf` (take about 1h20m)
-6. `cp build/bbbmini/bin/* /home/debian/`
+5. `git submodule update`
+6. `waf` (take about 1h20m)
+7. `cp build/bbbmini/bin/* /home/debian/`
 
 ## Cross compile ArduPilot (faster) with Ubuntu computer
 
