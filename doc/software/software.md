@@ -26,32 +26,33 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 9. Update software: `sudo apt update && sudo apt upgrade -y`
 10. Install software: `sudo apt install -y cpufrequtils g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen python`
 11. Update scripts: `cd /opt/scripts && sudo git pull`
-12. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
-13. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-14. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
-15. Reboot system: `sudo reboot`
-16. Login again: `ssh debian@beaglebone`
-17. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
-18. Change dir: `cd ./bb.org-overlays`
-19. Build and install overlays: `./install.sh`
-20. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
-21. Reboot system: `sudo reboot`
-22. Login again: `ssh debian@beaglebone`
-23. Clone ArduPilot code: `git clone https://github.com/diydrones/ardupilot.git`
-24. Change dir: `cd ardupilot`
-25. Init submodule: `git submodule init`
-26. Clone submodule: `git submodule update`
-27. Change dir: `cd Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-28. Build Rangefinder firmware: `make`
-29. Install Rangefinder firmware: `sudo make install`
-30. Your BeagleBone is now ready to use.
+12. Expend partiion: `sudo /opt/scripts/tools/grow_partition.sh`
+13. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
+14. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
+15. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+16. Reboot system: `sudo reboot`
+17. Login again: `ssh debian@beaglebone`
+18. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
+19. Change dir: `cd ./bb.org-overlays`
+20. Build and install overlays: `./install.sh`
+21. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
+22. Reboot system: `sudo reboot`
+23. Login again: `ssh debian@beaglebone`
+24. Clone ArduPilot code: `git clone https://github.com/diydrones/ardupilot.git`
+25. Change dir: `cd ardupilot`
+26. Init submodule: `git submodule init`
+27. Clone submodule: `git submodule update`
+28. Change dir: `cd Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+29. Build Rangefinder firmware: `make`
+30. Install Rangefinder firmware: `sudo make install`
+31. Your BeagleBone is now ready to use.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
 2. `alias waf="$PWD/modules/waf/waf-light"`
 3. `git checkout Copter-3.4` for ArduCopter or `git checkout ArduPlane-3.6.0` for ArduPlane
 4. `waf configure --board=bbbmini`
-5. `git submodule update`
+5. `git submodule update --init --recursive`
 6. `waf` (take about 1h20m)
 7. `cp build/bbbmini/bin/* /home/debian/`
 
@@ -63,11 +64,10 @@ Get the source code:
 2. `cd ardupilot`
 3. `./Tools/scripts/install-prereqs-ubuntu.sh`
 4. `git checkout Copter-3.4` for ArduCopter or `git checkout ArduPlane-3.6.0` for ArduPlane
-5. `git submodule init`
-6. `git submodule update`
-7. `alias waf="$PWD/modules/waf/waf-light"`
-8. `waf configure --board=bbbmini`
-9. `waf -j8`
+5. `git submodule update --init --recursive`
+6. `alias waf="$PWD/modules/waf/waf-light"`
+7. `waf configure --board=bbbmini`
+8. `waf`
 9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
