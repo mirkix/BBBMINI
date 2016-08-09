@@ -24,7 +24,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 7. Connect to the BeagleBone `ssh debian@beaglebone`
 8. Password `temppwd`
 9. Update software: `sudo apt update && sudo apt upgrade -y`
-10. Install software: `sudo apt install -y cpufrequtils g++ gawk git make ti-pru-cgt-installer device-tree-compiler screen python`
+10. Install software: `sudo apt install -y cpufrequtils g++ gawk git make device-tree-compiler screen python`
 11. Update scripts: `cd /opt/scripts && sudo git pull`
 12. Expend partiion: `sudo /opt/scripts/tools/grow_partition.sh`
 13. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
@@ -39,12 +39,9 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 22. Reboot system: `sudo reboot`
 23. Login again: `ssh debian@beaglebone`
 24. Clone ArduPilot code: `git clone https://github.com/diydrones/ardupilot.git`
-25. Change dir: `cd ardupilot`
-26. Init and clone submodule: `git submodule update --init --recursive`
-27. Change dir: `cd Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-28. Build Rangefinder firmware: `make`
-29. Install Rangefinder firmware: `sudo make install`
-30. Your BeagleBone is now ready to use.
+25. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+26. Install Rangefinder firmware: `sudo make install`
+27. Your BeagleBone is now ready to use.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
