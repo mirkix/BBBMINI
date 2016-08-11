@@ -33,7 +33,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 16. Reboot system: `sudo reboot`
 17. Login again: `ssh debian@beaglebone`
 18. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
-19. Build and install overlays: `./bb.org-overlays/install.sh`
+19. Build and install overlays: `cd ./bb.org-overlays && ./install.sh`
 20. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
 21. Reboot system: `sudo reboot`
 22. Login again: `ssh debian@beaglebone`
