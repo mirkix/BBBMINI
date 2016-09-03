@@ -37,7 +37,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 20. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
 21. Reboot system: `sudo reboot`
 22. Login again: `ssh debian@beaglebone`
-23. Clone ArduPilot code: `git clone https://github.com/diydrones/ardupilot.git`
+23. Clone ArduPilot code: `git clone https://github.com/ArduPilot/ardupilot.git`
 24. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
 25. Install Rangefinder firmware: `sudo make install`
 26. Your BeagleBone is now ready to use.
