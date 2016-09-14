@@ -8,9 +8,9 @@ How to prepare your BeagleBone Black to use as BBBmini.
 * BBBmini devicetree loaded at startup.
 
 ## Prepare microSD with your host computer
-1. Download Debian image [https://rcn-ee.com/rootfs/bb.org/testing/2016-07-04/console/BBB-blank-debian-8.5-console-armhf-2016-07-04-2gb.img.xz](https://rcn-ee.com/rootfs/bb.org/testing/2016-07-04/console/BBB-blank-debian-8.5-console-armhf-2016-07-04-2gb.img.xz)
-2. Decompress image: `unxz BBB-blank-debian-8.5-console-armhf-2016-07-04-2gb.img.xz`
-3. Copy image to microSDcard (>= 2GB): `sudo dd bs=4M if=./BBB-blank-debian-8.5-console-armhf-2016-07-04-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
+1. Download Debian image [https://rcn-ee.com/rootfs/bb.org/testing/2016-09-11/console/BBB-blank-debian-8.5-console-armhf-2016-09-11-2gb.img.xz](https://rcn-ee.com/rootfs/bb.org/testing/2016-09-11/console/BBB-blank-debian-8.5-console-armhf-2016-09-11-2gb.img.xz)
+2. Decompress image: `unxz BBB-blank-debian-8.5-console-armhf-2016-09-11-2gb.img.xz`
+3. Copy image to microSDcard (>= 2GB): `sudo dd bs=4M if=./BBB-blank-debian-8.5-console-armhf-2016-09-11-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
 The process can take 15-30 minutes depending on the speed of your microSD card.
 4. `sync` and remove mircroSD 
 
