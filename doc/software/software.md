@@ -81,7 +81,7 @@ ArduRover:
 
 1. `sudo /home/debian/ardurover` (plus parameter) 
 
-To connect a MAVLink groundstation with IÜ 192.168.178.26 add `-C udp:192.168.178.26:14550`
+To connect a MAVLink groundstation with IP 192.168.178.26 add `-C udp:192.168.178.26:14550`
 
 To use MAVLink via radio connected to UART4 add `-C /dev/ttyO4`. 
 
