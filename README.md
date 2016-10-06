@@ -33,10 +33,10 @@ What does BBBmini offer:
 * HC-SR04 ultrasonic rangefinder
 * GPS for full autonomous flights
 * Voltage and current sensing
-* I2C / GROVE connector for Status display and additional sensors
+* I2C connector for Status display and additional sensors
 * SPI connector for second redundant IMU
-* UART / GROVE connector for GPS
-* UART / GROVE connector for telemetry
+* UART connector for GPS
+* UART connector for telemetry
 * CAN connector with on board CAN bus transceiver
 * USB connector used for WiFi, Laser rangefinder or cameras
 * Excellent cost-performance ratio
