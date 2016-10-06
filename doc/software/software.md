@@ -29,8 +29,8 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 12. Update scripts: `cd /opt/scripts && sudo git pull`
 13. Expend partiion: `sudo /opt/scripts/tools/grow_partition.sh`
 14. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
-15. Add BBBMINI DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-16. Adjusting the BBB clock `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+15. Add BBBmini DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
+16. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
 17. Reboot system: `sudo reboot`
 18. Login again: `ssh debian@beaglebone`
 19. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
