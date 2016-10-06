@@ -96,9 +96,14 @@ For instructions how to get, build, test and run the software click [here](doc/s
 
 [![Join the chat at https://gitter.im/mirkix/BBBMINI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mirkix/BBBMINI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+
+## Forum
+
+[ArduPilot Forum](http://discuss.ardupilot.org/c/hardware-discussion/linux-autopilots)
+
 ## User Group
 
-[DIYDRONES.COM BBBmini User Group](http://diydrones.com/group/bbbmini)
+[diydrones.com BBBmini User Group](http://diydrones.com/group/bbbmini)
 
 # License
 
