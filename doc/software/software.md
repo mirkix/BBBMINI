@@ -70,16 +70,13 @@ Get the source code:
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
 
 ArduCopter:
-
-1. `sudo /home/debian/arducopter-quad` (plus parameter) 
+`sudo /home/debian/arducopter-quad` (plus parameter) 
 
 ArduPlane:
-
-1. `sudo /home/debian/arduplane` (plus parameter) 
+`sudo /home/debian/arduplane` (plus parameter) 
 
 ArduRover:
-
-1. `sudo /home/debian/ardurover` (plus parameter) 
+`sudo /home/debian/ardurover` (plus parameter) 
 
 To connect a MAVLink groundstation with IP 192.168.178.26 add `-C udp:192.168.178.26:14550`
 
@@ -94,3 +91,33 @@ Example: MAVLink groundstation with IP 192.168.178.26 on port 14550 and GPS conn
 Example: MAVLink groundstation via radio connected to UART4 and GPS connected to `/dev/ttyO5` UART5.
 
 `sudo /home/debian/arducopter-quad -B /dev/ttyO5 -C /dev/ttyO4`
+
+## Automatic start ArduPilot after boot
+
+If ArduPilot should start automatically at boot time follow the instructions below:
+
+1. Connect to you BeagleBone via ssh with `ssh debian@beaglebone`
+2. Edit `/etc/rc.local` with `sudo nano /etc/rc.local`
+3. Modify file to (use your ArduPilot file and parameter):
+```
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+/bin/sleep 10
+/home/debian/arducopter-quad -B /dev/ttyO5 -C /dev/ttyO4 > /home/debian/arducopter.log &
+
+exit 0
+```
+4. Save file: `Strg + o` + Enter
+5. Exit nano: `Strg + x`
+6. Reboot BegaleBone with `sudo reboot`
