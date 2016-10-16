@@ -96,7 +96,7 @@ Example: MAVLink groundstation via radio connected to UART4 and GPS connected to
 
 If ArduPilot should start automatically at boot time follow the instructions below:
 
-1. Connect to you BeagleBone via ssh with `ssh debian@beaglebone`
+1. Connect to your BeagleBone via ssh with `ssh debian@beaglebone`
 2. Edit `/etc/rc.local` with `sudo nano /etc/rc.local`
 3. Modify file to (use your ArduPilot file and parameter):
 ```
