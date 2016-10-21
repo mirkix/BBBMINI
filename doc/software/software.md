@@ -25,23 +25,24 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 8. Password `temppwd`
 9. Update software: `sudo apt update && sudo apt upgrade -y`
 10. Install software: `sudo apt install -y cpufrequtils g++ liblttng-ust-dev pkg-config gawk git make device-tree-compiler screen python python-pip`
-11. Set link to pkg-config: `sudo ln -s pkg-config /usr/bin/arm-linux-gnueabihf-pkg-config`
-12. Update scripts: `cd /opt/scripts && sudo git pull`
-13. Expend partiion: `sudo /opt/scripts/tools/grow_partition.sh`
-14. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
-15. Add BBBmini DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-16. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
-17. Reboot system: `sudo reboot`
-18. Login again: `ssh debian@beaglebone`
-19. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
-20. Build and install overlays: `cd ./bb.org-overlays && ./install.sh`
-21. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
-22. Reboot system: `sudo reboot`
-23. Login again: `ssh debian@beaglebone`
-24. Clone ArduPilot code: `git clone https://github.com/ArduPilot/ardupilot.git`
-25. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-26. Install Rangefinder firmware: `sudo make install`
-27. Your BeagleBone is now ready to use.
+11. Install Python library: `pip install future lxml`
+12. Set link to pkg-config: `sudo ln -s pkg-config /usr/bin/arm-linux-gnueabihf-pkg-config`
+13. Update scripts: `cd /opt/scripts && sudo git pull`
+14. Expend partiion: `sudo /opt/scripts/tools/grow_partition.sh`
+15. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
+16. Add BBBmini DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
+17. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+18. Reboot system: `sudo reboot`
+19. Login again: `ssh debian@beaglebone`
+20. Clone overlays: `git clone https://github.com/beagleboard/bb.org-overlays`
+21. Build and install overlays: `cd ./bb.org-overlays && ./install.sh`
+22. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
+23. Reboot system: `sudo reboot`
+24. Login again: `ssh debian@beaglebone`
+25. Clone ArduPilot code: `git clone https://github.com/ArduPilot/ardupilot.git`
+26. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+27. Install Rangefinder firmware: `sudo make install`
+28. Your BeagleBone is now ready to use.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
