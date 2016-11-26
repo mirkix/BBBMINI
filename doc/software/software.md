@@ -1,6 +1,6 @@
 # Software
 
-How to prepare your BeagleBone Black to use as BBBmini.
+How to prepare your BeagleBone to use as BBBmini.
 
 * Debian 8.6 jessie
 * GCC 4.9
