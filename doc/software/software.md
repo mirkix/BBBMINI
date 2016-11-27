@@ -28,7 +28,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 11. Install Python library: `sudo pip install future`
 12. Set link to pkg-config: `sudo ln -s pkg-config /usr/bin/arm-linux-gnueabihf-pkg-config`
 13. Update scripts: `cd /opt/scripts && sudo git pull`
-14. Expend partiion: `sudo /opt/scripts/tools/grow_partition.sh`
+14. Expend partition: `sudo /opt/scripts/tools/grow_partition.sh`
 15. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
 16. Add BBBmini DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
 17. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
