@@ -26,7 +26,7 @@ To build the example code / test code follow the instructions below.
 `sudo /home/debian/INS_generic`
 
 ## Check baro
-`sudo /home/debian//BARO_generic`
+`sudo /home/debian/BARO_generic`
 
 ## Check GPS
 `sudo /home/debian/GPS_AUTO_test -B /dev/ttyO5`
