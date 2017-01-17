@@ -48,10 +48,9 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 1. `cd ardupilot`
 2. `git checkout Copter-3.4.4` for ArduCopter or `git checkout ArduPlane-3.7.1` for ArduPlane or `git checkout APMrover2-3.1.0` for ArduRover
 3. `git submodule update --init --recursive`
-4. `alias waf="$PWD/modules/waf/waf-light"`
-5. `waf configure --board=bbbmini`
-6. `waf` (take about 1h20m)
-7. `cp build/bbbmini/bin/* /home/debian/`
+4. `./waf configure --board=bbbmini`
+5. `./waf` (take about 1h20m)
+6. `cp build/bbbmini/bin/* /home/debian/`
 
 ## Cross compile ArduPilot (faster) with Ubuntu computer
 
@@ -62,10 +61,9 @@ Get the source code:
 3. `./Tools/scripts/install-prereqs-ubuntu.sh`
 4. `git checkout Copter-3.4.4` for ArduCopter or `git checkout ArduPlane-3.7.1` for ArduPlane or `git checkout APMrover2-3.1.0` for ArduRover
 5. `git submodule update --init --recursive`
-6. `alias waf="$PWD/modules/waf/waf-light"`
-7. `waf configure --board=bbbmini`
-8. `waf`
-9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
+6. `./waf configure --board=bbbmini`
+7. `./waf`
+8. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
