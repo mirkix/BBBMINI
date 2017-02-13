@@ -35,12 +35,10 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 18. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
 19. Reboot system: `sudo reboot`
 20. Login again: `ssh debian@beaglebone`
-21. Reboot system: `sudo reboot`
-22. Login again: `ssh debian@beaglebone`
-23. Clone ArduPilot code: `git clone https://github.com/ArduPilot/ardupilot.git`
-24. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-25. Install Rangefinder firmware: `sudo make install`
-26. Your BeagleBone is now ready to use.
+21. Clone ArduPilot code: `git clone https://github.com/ArduPilot/ardupilot.git`
+22. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
+23. Install Rangefinder firmware: `sudo make install`
+24. Your BeagleBone is now ready to use.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
