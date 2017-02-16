@@ -24,7 +24,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 7. Connect to the BeagleBone `ssh debian@beaglebone`
 8. Password `temppwd`
 9. Update software: `sudo apt update && sudo apt upgrade -y`
-10. Install software: `sudo apt install -y bb-cape-overlays cpufrequtils g++ liblttng-ust-dev pkg-config gawk git make device-tree-compiler screen python python-dev python-lxml python-pip`
+10. Install software: `sudo apt install -y bb-cape-overlays cpufrequtils g++ liblttng-ust-dev pkg-config gawk git make screen python python-dev python-lxml python-pip`
 11. Install Python library: `sudo pip install future`
 12. Set link to pkg-config: `sudo ln -s pkg-config /usr/bin/arm-linux-gnueabihf-pkg-config`
 13. Update scripts: `cd /opt/scripts && sudo git pull`
