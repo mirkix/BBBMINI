@@ -73,7 +73,7 @@ ArduPlane:
 ArduRover:
 `sudo /home/debian/ardurover` (plus parameter) 
 
-Paramter mapping:
+Parameter mapping:
 
 start parameter | ArduPilot serial port 
 ------------ | -------------
@@ -83,6 +83,8 @@ start parameter | ArduPilot serial port
 -D | SERIAL2
 -E | SERIAL4
 -F | SERIAL5
+
+Check http://ardupilot.org/copter/docs/parameters.html#serial0-baud-serial0-baud-rate to set the right value for `SERIALx_BAUD` and `SERIALx_PROTOCOL`
 
 To connect a MAVLink groundstation with IP 192.168.178.26 add `-C udp:192.168.178.26:14550`
 
