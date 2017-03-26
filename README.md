@@ -78,7 +78,7 @@ The decision was made for the BeagleBone. With the Programmable Real-Time Units 
 
 
 # [Hardware](doc/hardware/hardware.md)
-* BeagleBone Black or BeagleBone Green
+* [BeagleBone Black](https://beagleboard.org/black) or [BeagleBone Green](https://beagleboard.org/green)
 * [BBBMINI-PCB](https://github.com/mirkix/BBBMINI-PCB) (recommended) or BeagleBone Proto Cape with IMU MPU-9250 breakout board and Baro MS5611 breakout board (try to get a GY-9250 and GY-63 breakout board)
 * RC receiver (S.BUS, PPM-Sum, Spektrum Satellit SPM 9645)
 * optional GPS receiver
