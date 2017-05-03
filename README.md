@@ -52,7 +52,7 @@ The BBBmini project development includes:
 * Add redundancy sensors via SPI / I2C or UART
 * Lots of test flights and fine tuning in hardware and software to get a stable and reliable BeagleBone Green flightcontroller
 
-#Why BeagleBone
+# Why BeagleBone
 
 Once I had the idea to develop an flightcontroller, I have examined on the market available computer for their suitability. The following criteria should be met by the computer being used.
 
@@ -60,7 +60,7 @@ First, the computer should be very well supported by the community. As a result,
 
 The decision was made for the BeagleBone. With the Programmable Real-Time Units of the BeagleBone, it is possible to create the BBBmini with only a few sensor breakout boards. In addition the BeagleBone offers many interfaces such as UART, SPI, I2C, CAN, USB and ADC. All these interfaces are used by the BBBmini.
 
-##BeagleBone parts used for BBBmini
+## BeagleBone parts used for BBBmini
 
 * Main CPU running Linux
 * PRU0 device driver for HC-SR04 ultrasonic rangefinder
