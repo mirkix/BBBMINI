@@ -40,6 +40,10 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 23. Install Rangefinder firmware: `sudo make install`
 24. Your BeagleBone is now ready to use.
 
+## Prebuild ArduPilot 
+1. Download ready compiled ArduPilot file from http://bbbmini.org/download/bbbmini/
+2. Copy file via SCP or microSD on your BeagleBone
+
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
 2. `git checkout Copter-3.4.6` for ArduCopter or `git checkout ArduPlane-3.7.1` for ArduPlane or `git checkout APMrover2-3.1.2` for ArduRover
