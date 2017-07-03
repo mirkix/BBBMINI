@@ -46,7 +46,10 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
-2. `git checkout Copter-3.4.6` for ArduCopter or `git checkout ArduPlane-3.7.1` for ArduPlane or `git checkout APMrover2-3.1.2` for ArduRover
+2.  * for ArduCopter `git checkout Copter-3.4.6` or `git checkout Copter-3.5`
+    * for ArduPlane `git checkout ArduPlane-3.7.1` or `git checkout ArduPlane-beta` 
+    * for ArduRover `git checkout APMrover2-3.1.2`
+    * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
 3. `git submodule update --init --recursive`
 4. `./waf configure --board=bbbmini`
 5. `./waf` (take about 1h20m)
@@ -59,7 +62,10 @@ Get the source code:
 1. `git clone https://github.com/diydrones/ardupilot.git`
 2. `cd ardupilot`
 3. `./Tools/scripts/install-prereqs-ubuntu.sh`
-4. `git checkout Copter-3.4.6` for ArduCopter or `git checkout ArduPlane-3.7.1` for ArduPlane or `git checkout APMrover2-3.1.2` for ArduRover
+4.  * for ArduCopter `git checkout Copter-3.4.6` or `git checkout Copter-3.5`
+    * for ArduPlane `git checkout ArduPlane-3.7.1` or `git checkout ArduPlane-beta` 
+    * for ArduRover `git checkout APMrover2-3.1.2`
+    * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
 5. `git submodule update --init --recursive`
 6. `./waf configure --board=bbbmini`
 7. `./waf`
@@ -76,6 +82,9 @@ ArduPlane:
 
 ArduRover:
 `sudo /home/debian/ardurover` (plus parameter) 
+
+ArduSub:
+`sudo /home/debian/ardusub` (plus parameter) 
 
 Parameter mapping:
 
