@@ -75,7 +75,7 @@ Get the source code:
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
 
 ArduCopter:
-`sudo /home/debian/arducopter-quad` (plus parameter) 
+`sudo /home/debian/arducopter` (plus parameter) 
 
 ArduPlane:
 `sudo /home/debian/arduplane` (plus parameter) 
@@ -107,11 +107,11 @@ If there is a GPS connected to UART5 add `-B /dev/ttyO5`.
 
 Example: MAVLink groundstation with IP 192.168.178.26 on port 14550 and GPS connected to `/dev/ttyO5` UART5.
 
-`sudo /home/debian/arducopter-quad -C udp:192.168.178.26:14550 -B /dev/ttyO5`
+`sudo /home/debian/arducopter -C udp:192.168.178.26:14550 -B /dev/ttyO5`
 
 Example: MAVLink groundstation via radio connected to UART4 and GPS connected to `/dev/ttyO5` UART5.
 
-`sudo /home/debian/arducopter-quad -B /dev/ttyO5 -C /dev/ttyO4`
+`sudo /home/debian/arducopter -B /dev/ttyO5 -C /dev/ttyO4`
 
 ## Automatic start ArduPilot after boot
 
@@ -135,7 +135,7 @@ If ArduPilot should start automatically at boot time follow the instructions bel
 # By default this script does nothing.
 
 /bin/sleep 10
-/home/debian/arducopter-quad -B /dev/ttyO5 -C /dev/ttyO4 > /home/debian/arducopter.log &
+/home/debian/arducopter -B /dev/ttyO5 -C /dev/ttyO4 > /home/debian/arducopter.log &
 
 exit 0
 ```
