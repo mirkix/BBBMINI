@@ -89,6 +89,8 @@ Click [here](doc/hardware/hardware.md) for further instruction how to assemble t
 # [Software](doc/software/software.md)
 For instructions how to get, build, test and run the software click [here](doc/software/software.md).
 
+# Hackster.io
+Please check also my [BBBmini project description on hackster.io](https://www.hackster.io/mirkix/flying-beaglebone-green-448b60).
 
 # Support
 
