@@ -10,9 +10,9 @@ How to prepare your BeagleBone to use as BBBmini.
 ## Prepare microSD with your Linux host computer
 1. Download Debian image [https://rcn-ee.net/rootfs/bb.org/testing/2016-10-02/console/BBB-blank-debian-8.6-console-armhf-2016-10-02-2gb.img.xz](https://rcn-ee.net/rootfs/bb.org/testing/2016-10-02/console/BBB-blank-debian-8.6-console-armhf-2016-10-02-2gb.img.xz)
 2. Decompress image: `unxz BBB-blank-debian-8.6-console-armhf-2016-10-02-2gb.img.xz`
-3. Copy image to microSDcard (>= 2GB): `sudo dd bs=4M if=./BBB-blank-debian-8.6-console-armhf-2016-09-21-2gb.img of=/dev/sdX` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your mircroSD.
+3. Copy image to microSD card (>= 2GB): `sudo dd bs=4M if=./BBB-blank-debian-8.6-console-armhf-2016-10-02-2gb.img of=/dev/sdX status=progress` /dev/sdX should point to your microSD, be careful here!!! Use `lsblk` to figure out, which is your microSD.
 The process can take 15-30 minutes depending on the speed of your microSD card.
-4. `sync` and remove mircroSD 
+4. `sync` and remove microSD 
 
 ## Install Debian to your BeagleBone eMMC
 1. Plug prepared microSD into BeagleBone
