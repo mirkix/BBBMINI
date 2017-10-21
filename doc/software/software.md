@@ -47,7 +47,7 @@ The process can take 15-30 minutes depending on the speed of your microSD card.
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
 2.  * for ArduCopter `git checkout Copter-3.5.2`
-    * for ArduPlane `git checkout ArduPlane-3.7.1` or `git checkout ArduPlane-beta` 
+    * for ArduPlane `git checkout ArduPlane-3.8.2` or `git checkout ArduPlane-beta` 
     * for ArduRover `git checkout APMrover2-3.1.2`
     * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
 3. `git submodule update --init --recursive`
@@ -63,7 +63,7 @@ Get the source code:
 2. `cd ardupilot`
 3. `./Tools/scripts/install-prereqs-ubuntu.sh`
 4.  * for ArduCopter `git checkout Copter-3.5.2`
-    * for ArduPlane `git checkout ArduPlane-3.7.1` or `git checkout ArduPlane-beta` 
+    * for ArduPlane `git checkout ArduPlane-3.8.2` or `git checkout ArduPlane-beta` 
     * for ArduRover `git checkout APMrover2-3.1.2`
     * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
 5. `git submodule update --init --recursive`
