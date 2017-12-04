@@ -46,7 +46,7 @@ How to prepare your BeagleBone to use as BBBmini.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ardupilot`
-2.  * for ArduCopter `git checkout Copter-3.5.2`
+2.  * for ArduCopter `git checkout Copter-3.5.4`
     * for ArduPlane `git checkout ArduPlane-3.8.2` or `git checkout ArduPlane-beta` 
     * for ArduRover `git checkout APMrover2-3.1.2`
     * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
@@ -63,8 +63,8 @@ Get the source code:
 1. `git clone https://github.com/diydrones/ardupilot.git`
 2. `cd ardupilot`
 3. `./Tools/scripts/install-prereqs-ubuntu.sh`
-4.  * for ArduCopter `git checkout Copter-3.5.2`
-    * for ArduPlane `git checkout ArduPlane-3.8.2` or `git checkout ArduPlane-beta` 
+4.  * for ArduCopter `git checkout Copter-3.5.4`
+    * for ArduPlane `git checkout ArduPlane-3.8.3` or `git checkout ArduPlane-beta` 
     * for ArduRover `git checkout APMrover2-3.1.2`
     * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
 5. `git submodule update --init --recursive`
