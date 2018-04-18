@@ -35,10 +35,7 @@ How to prepare your BeagleBone to use as BBBmini.
 18. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
 19. Reboot system: `sudo reboot`
 20. Login again: `ssh debian@beaglebone`
-21. Clone ArduPilot code: `git clone https://github.com/ArduPilot/ardupilot.git`
-22. Change dir: `cd ardupilot/Tools/Linux_HAL_Essentials/pru/rangefinderpru`
-23. Install Rangefinder firmware: `sudo make install`
-24. Your BeagleBone is now ready to use.
+21. Your BeagleBone is now ready to use.
 
 ## Prebuild ArduPilot 
 1. Download ready compiled ArduPilot file from http://bbbmini.org/download/bbbmini/
