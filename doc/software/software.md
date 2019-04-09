@@ -42,32 +42,34 @@ How to prepare your BeagleBone to use as BBBmini.
 2. Copy file via SCP or microSD on your BeagleBone
 
 ## Compile ArduPilot native on BeagleBone
-1. `cd ardupilot`
-2.  * for ArduCopter `git checkout Copter-3.6.7`
-    * for ArduPlane `git checkout ArduPlane-3.9.6` or `git checkout ArduPlane-beta` 
-    * for ArduRover `git checkout Rover-3.5.0`
-    * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
-3. `git submodule update --init --recursive`
-4. `./waf configure --board=bbbmini`
-5. `./waf` (take about 1h20m)
-6. `cp build/bbbmini/bin/* /home/debian/`
-
-## Cross compile ArduPilot (faster) with Ubuntu computer
-
-Get the source code:
-
 1. `cd ~`
-1. `git clone https://github.com/diydrones/ardupilot.git`
-2. `cd ardupilot`
-3. `./Tools/scripts/install-prereqs-ubuntu.sh`
+2. `git clone https://github.com/ardupilot/ardupilot.git`
+3. `cd ardupilot`
 4.  * for ArduCopter `git checkout Copter-3.6.7`
     * for ArduPlane `git checkout ArduPlane-3.9.6` or `git checkout ArduPlane-beta` 
     * for ArduRover `git checkout Rover-3.5.0`
     * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
 5. `git submodule update --init --recursive`
 6. `./waf configure --board=bbbmini`
-7. `./waf`
-8. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
+7. `./waf` (take about 1h20m)
+8. `cp build/bbbmini/bin/* /home/debian/`
+
+## Cross compile ArduPilot (faster) with Ubuntu computer
+
+Get the source code:
+
+1. `cd ~`
+2. `git clone https://github.com/ardupilot/ardupilot.git`
+3. `cd ardupilot`
+4. `./Tools/scripts/install-prereqs-ubuntu.sh`
+5.  * for ArduCopter `git checkout Copter-3.6.7`
+    * for ArduPlane `git checkout ArduPlane-3.9.6` or `git checkout ArduPlane-beta` 
+    * for ArduRover `git checkout Rover-3.5.0`
+    * for ArduSub `git checkout ArduSub-stable` or `git checkout ArduSub-beta`
+6. `git submodule update --init --recursive`
+7. `./waf configure --board=bbbmini`
+8. `./waf`
+9. `scp build/bbbmini/bin/* debian@beaglebone:/home/debian/`
 
 ## Run ArduPilot
 Now you can check your hardware [here.](../checkhardware/checkhardware.md)
