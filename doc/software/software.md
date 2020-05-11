@@ -37,10 +37,6 @@ How to prepare your BeagleBone to use as BBBmini.
 20. Login again: `ssh debian@beaglebone`
 21. Your BeagleBone is now ready to use.
 
-## Prebuild ArduPilot 
-1. Download ready compiled ArduPilot file from http://bbbmini.org/download/bbbmini/
-2. Copy file via SCP or microSD on your BeagleBone
-
 ## Compile ArduPilot native on BeagleBone
 1. `cd ~`
 2. `git clone https://github.com/ardupilot/ardupilot.git`
