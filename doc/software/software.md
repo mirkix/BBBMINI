@@ -24,18 +24,17 @@ How to prepare your BeagleBone to use as BBBmini.
 7. Connect to the BeagleBone `ssh debian@beaglebone`
 8. Password `temppwd`
 9. Update software: `sudo apt update && sudo apt upgrade -y`
-10. Install software: `sudo apt install -y bb-cape-overlays cpufrequtils g++ pkg-config gawk git make screen python python-dev python-lxml python-pip`
-11. Install Python library: `sudo pip install future`
-12. Set link to pkg-config: `sudo ln -s pkg-config /usr/bin/arm-linux-gnueabihf-pkg-config`
-13. Update scripts: `cd /opt/scripts && sudo git pull`
-14. Expend partition: `sudo /opt/scripts/tools/grow_partition.sh`
-15. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
-16. Add BBBmini DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
-17. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
-18. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
-19. Reboot system: `sudo reboot`
-20. Login again: `ssh debian@beaglebone`
-21. Your BeagleBone is now ready to use.
+10. Install software: `sudo apt install -y bb-cape-overlays cpufrequtils g++ pkg-config gawk git make screen python python-dev python-lxml python-pip python-future`
+11. Set link to pkg-config: `sudo ln -s pkg-config /usr/bin/arm-linux-gnueabihf-pkg-config`
+12. Update scripts: `cd /opt/scripts && sudo git pull`
+13. Expend partition: `sudo /opt/scripts/tools/grow_partition.sh`
+14. Install RT Kernel: `sudo /opt/scripts/tools/update_kernel.sh --bone-rt-kernel --lts-4_4`
+15. Add BBBmini DTB: `sudo sed -i 's/#dtb=$/dtb=am335x-boneblack-bbbmini.dtb/' /boot/uEnv.txt`
+16. Add ADC DTBO: `sudo sed -i 's/#cape_enable=bone_capemgr.enable_partno=/cape_enable=bone_capemgr.enable_partno=BB-ADC/g' /boot/uEnv.txt`
+17. Set clock to fixed 1GHz `sudo sed -i 's/GOVERNOR="ondemand"/GOVERNOR="performance"/g' /etc/init.d/cpufrequtils`
+18. Reboot system: `sudo reboot`
+19. Login again: `ssh debian@beaglebone`
+20. Your BeagleBone is now ready to use.
 
 ## Compile ArduPilot native on BeagleBone
 1. `cd ~`
