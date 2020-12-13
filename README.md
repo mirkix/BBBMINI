@@ -54,7 +54,7 @@ The BBBmini project development includes:
 
 # Why BeagleBone
 
-Once I had the idea to develop an flightcontroller, I have examined on the market available computer for their suitability. The following criteria should be met by the computer being used.
+Once I had the idea to develop a flightcontroller, I have examined on the market available computer for their suitability. The following criteria should be met by the computer being used.
 
 First, the computer should be very well supported by the community. As a result, a Raspberry Pi or BeagleBone could be used. In addition, the flightcontroller should be set up with as little as possible external components.
 
